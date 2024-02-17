@@ -16,5 +16,66 @@
     width:100%; 
     background-repeat: no-repeat;  
   } */ 
+
+  .hero-bg-image{
+    background-image:url("./assets/pasted_graphic_world.png"); 
+    background-size: contain; 
+    background-repeat:no-repeat; 
+    background-position:100% 100%;  
+  }
+
+  .glass::before{
+    content:''; 
+    height:100px; 
+    width:100px; 
+    position:absolute; 
+    bottom:0; 
+    left:0; 
+    border-radius:50%; 
+    z-index:-1;  
+    transform:translate(-25%, 50%);  
+    background:#0dba4b; 
+    border:2px solid white; 
+  }
+
+  .glass::after{ 
+    content:''; 
+    height:100px; 
+    width:100px; 
+    position:absolute; 
+    top:0;  
+    right:0;  
+    border-radius:50%; 
+    z-index:-1;  
+    transform:translate(50%, 50%);   
+    background:#0dba4b; 
+    border:2px solid white; 
+  }
+
+  .glass{
+    /* background:#0dba4b;   */
+    z-index:10; 
+  }
+
+  .glass-blur{
+    position:absolute; 
+    left:0; 
+    top:0; 
+    height:100%; 
+    width:100%; 
+  }
+
+  .footer .navlinks a{ 
+    @apply text-white font-semibold font-inter 
+  }
+
+  .footer .social{
+    @apply flex gap-x-3 mt-4;  
+  }
+
+  .footer .social i{
+    @apply text-white cursor-pointer p-3;
+  }
+
 }
 

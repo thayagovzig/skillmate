@@ -14,6 +14,9 @@ export default {
         }, 
         secondary:{
           green:"#cff1db"
+        }, 
+        dark:{ 
+          green:"#054A1E" 
         }
       }
     },
