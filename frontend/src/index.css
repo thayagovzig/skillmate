@@ -1,0 +1,20 @@
+@tailwind base; 
+@tailwind utilities; 
+@tailwind components; 
+
+
+@layer components{
+  /* .hero-bg-cover{
+    background-image:url("./assets/pasted_graphic_world.png"); 
+    background-origin:100% 100%; 
+    background-size: contain;  
+    /* position:absolute; 
+    bottom:0; 
+    right:0;  */
+    /* height:100%; 
+    flex:1; 
+    width:100%; 
+    background-repeat: no-repeat;  
+  } */ 
+}
+
