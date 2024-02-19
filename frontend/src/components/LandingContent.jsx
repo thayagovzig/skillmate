@@ -1,6 +1,6 @@
 const LandingContent = () => (
-    <div className = "bg-slate-100">
-        <div className = "py-10 container mx-auto px-5 ">   
+    <div className = "bg-slate-100">  
+        <div className = "py-10 container mx-auto px-5" id = "whyskillmate">   
             <h2 className = "text-4xl font-sora font-bold">Why Skill<span className = "text-primary-green">mate?</span></h2>
             <div className = "space-y-8 mt-10"> 
                 <div className = "font-inter space-y-2"> 

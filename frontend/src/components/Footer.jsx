@@ -3,7 +3,7 @@ import Logo from "../assets/skillmate_logo/Pasted Graphic footer logo white.png"
 const Footer = () => (
     <div className="bg-dark-green footer">  
         <div className="container mx-auto py-10"> 
-            <div className = "flex justify-around">  
+            <div className = "flex justify-around flex-col items-center md:flex-row">   
                 <div className="logo">
                     <img src={Logo} alt="" className = "w-40" /> 
                 </div>

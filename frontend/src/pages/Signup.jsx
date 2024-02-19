@@ -1,5 +1,7 @@
 import { useState, useRef } from "react"; 
 import { Link } from "react-router-dom";
+import PhoneInput from 'react-phone-number-input'; 
+import "react-phone-number-input/style.css"; 
 
 const Signup = () => {
     const [firstName, setFirstName] = useState(""); 
@@ -7,7 +9,8 @@ const Signup = () => {
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState(""); 
     const [country, setCountry] = useState(""); 
-    const [agree, setAgree] = useState(false);     
+    const [agree, setAgree] = useState(false);  
+    const [phoneNumber, setPhoneNumber] = useState();       
     
     return (
     <div className = "w-screen h-screen flex justify-center items-center ">  
@@ -43,6 +46,11 @@ const Signup = () => {
                 />
             </div>
 
+            <div className = "flex flex-col gap-y-2 my-4">
+                <label htmlFor="phonenumber" className = "font-semibold">Phone Number</label>  
+                <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none border-none focus:outline-none" />
+            </div>
+
             <div className = "flex flex-col gap-y-2"> 
                 <label htmlFor="password" className = "font-semibold">Password</label>
                 <input type="password" name = "password" 
@@ -61,7 +69,7 @@ const Signup = () => {
             </div>
 
             <div className = "flex justify-center text-center">
-                <p className="text-sm font-inter font-semibold mt-2">Already have an account? <Link to = "/login" className = "underline text-primary-green cursor-pointer">Login</Link></p> 
+                {/* <p className="text-sm font-inter font-semibold mt-2">Already have an account? <Link to = "/login" className = "underline text-primary-green cursor-pointer">Login</Link></p>  */}
             </div>
         </form> 
     </div>

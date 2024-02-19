@@ -1,7 +1,7 @@
 const HeroBanner = () => (
     <div className = "flex w-full bg-secondary-green py-8 overflow-x-hidden">   
         <div className="container mx-auto flex justify-between items-center flex-grow-0 flex-col lg:flex-row">   
-            <div className="max-w-fit"> 
+            <div className="max-w-fit flex flex-col items-center lg:items-start"> 
                 <h2 className = "font-bold text-black font-sora text-2xl mb-4">Elevate Your Craft</h2>
                 <p className = "text-lg font-semibold">Discover the Power of Skills, Jobs and Projects</p> 
                 <p className= "font-semibold mt-1 mb-4 text-lg">Your Gateway to Limitless Possibilities</p> 

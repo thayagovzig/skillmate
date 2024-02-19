@@ -12,7 +12,7 @@ const Navbar = () => (
                 <ul className = "hidden lg:flex justify-center items-center gap-x-6 font-semibold text-sm py-2 flex-nowrap "> 
                     {/* <li>Get a Job</li> */}
                     {/* <li>Discover Skills</li> */}
-                    <li>Why Skillmate</li>
+                    <li><a href = "#whyskillmate">Why Skillmate</a></li>
                     <li>About Us</li> 
                 </ul>
 
@@ -20,8 +20,8 @@ const Navbar = () => (
 
             <div className="right flex justify-center items-center gap-x-3"> 
                 <input type="text" className="hidden md:block rounded-full px-4 py-2 max-w-md outline-none border-2 border-slate-200 placeholder:text-slate-600 text-slate-900 placeholder:font-semibold placeholder:text-sm text-sm font-semibold" placeholder = "Search" />
-                <Link to = "/login" className="rounded-full text-primary-green px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap">Log in</Link> 
-                <Link to = "/signup" className="rounded-full bg-primary-green text-white px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap">Sign up</Link>
+                <Link to = "/" className="rounded-full text-primary-green px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap">Log in</Link> 
+                <Link to = "/signup" className="rounded-full bg-primary-green text-white px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap">Join Waitlist</Link>
             </div>
         </div>
     </div> 
