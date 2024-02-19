@@ -1,24 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from "./components/Navbar"; 
-import Hero from "./components/Hero";  
-import HeroBanner from './components/HeroBanner';
-import LandingContent from './components/LandingContent';
-import Appraisal from './components/Appraisal';
-import Footer from './components/Footer';
+import Home from "./pages/Home"
+import Signup from "./pages/Signup" 
+import {BrowserRouter, Routes, Route} from "react-router-dom"; 
+import Login from './pages/Login';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className = "overflow-x-hidden w-screen relative">    
-      <Navbar /> 
-      <Hero />
-      <HeroBanner />
-      <LandingContent />
-      <Appraisal />
-      <Footer />
-    </div> 
+  <>
+    <Routes>
+      <Route path = "/" element = {<Home />} />  
+      <Route path = "/signup" element = {<Signup />} />
+      <Route path = "/login" element = {<Login />} /> 
+    </Routes>
+  </>    
+
   )
 }
 

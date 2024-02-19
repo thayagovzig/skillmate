@@ -26,10 +26,10 @@ const Footer = () => (
                 <div>
                     <h2 className = "font-inter text-center text-white tracking-wider">Follow us on</h2>
                     <div className="social">
-                        <a><i class="fa-brands fa-instagram"></i></a>
-                        <a><i class="fa-brands fa-facebook"></i></a>
-                        <a><i class="fa-brands fa-twitter"></i></a>
-                        <a><i class="fa-brands fa-linkedin"></i></a>
+                        <a><i className="fa-brands fa-instagram"></i></a>
+                        <a><i className="fa-brands fa-facebook"></i></a>
+                        <a><i className="fa-brands fa-twitter"></i></a>
+                        <a><i className="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
 

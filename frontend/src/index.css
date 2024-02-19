@@ -77,5 +77,16 @@
     @apply text-white cursor-pointer p-3;
   }
 
+
+}
+
+.neomorphic{
+  box-shadow:-5px -5px 10px rgba(255,255,255,.5),  
+              5px 5px 10px rgba(0,0,0,.5); 
+}
+
+.neomorphic-inward{
+  box-shadow:inset -2px -2px 5px rgba(255,255,255,.5),  
+              inset 2px 2px 5px rgba(0,0,0,.5); 
 }
 
