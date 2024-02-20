@@ -2,7 +2,7 @@ import People from "../assets/three peeps.png"
 
 const PreLoginLandingContent = () => {
     return(
-        <div className = "py-10">  
+        <div className = "py-10 px-5">    
             <div className="container mx-auto flex flex-col lg:flex-row">  
                 <div className = "col-span-1"> 
                     <h2 className = "text-3xl font-bold font-inter">Why Skill<span className = "text-primary-green">mate?</span></h2>
@@ -11,7 +11,7 @@ const PreLoginLandingContent = () => {
                                 <span className = "font-semibold">Empowering Freelancers, Redefining Success</span><br />
                                 At Skillmate, we believe in the extraordinary potential of freelancers like you.<br />
                                 Our platform is not just another marketplace;<br />
-                                it s a revolution in the freelancing landscape. Here s why you should make<br />  
+                                it s a revolution in the freelancing landscape. Here is why you should make<br />  
                                 Skillmate your ultimate freelancing companion:<br />
                     </p>
 

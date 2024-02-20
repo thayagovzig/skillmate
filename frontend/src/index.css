@@ -122,3 +122,12 @@ html{
   @apply px-4 py-1 rounded-md outline-none border-2 border-black mx-1;     
 }
 
+.paper-texture-bg{
+  background:/* linear-gradient(rgba(66, 228, 66, 0.3), rgba(66, 228, 66, 0.4)),*/ url("./assets/paper-texture-background.jpg")  ; 
+  background-size: cover;  
+}
+
+.abc{
+  background:#27e36c; 
+}
+

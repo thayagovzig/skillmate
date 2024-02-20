@@ -8,28 +8,28 @@ const Footer = () => (
                     <img src={Logo} alt="" className = "w-40" /> 
                 </div>
 
-                <ul className = "navlinks flex flex-col gap-y-3">  
+                <ul className = "navlinks flex md:flex-col gap-y-3 my-12 gap-x-3">    
                     <a href="">
                         <li>Home</li>
                     </a>
                     <a href="">
-                        <li>About Us</li>
+                        <li>About</li>
                     </a>
                     <a href="">
                         <li>Services</li>
                     </a>
-                    <a href="">
-                        <li>Contact Us</li>
+                    <a href="/signup"> 
+                        <li>Contact</li>
                     </a>
                 </ul>
 
                 <div>
                     <h2 className = "font-inter text-center text-white tracking-wider">Follow us on</h2>
                     <div className="social">
-                        <a><i className="fa-brands fa-instagram"></i></a>
-                        <a><i className="fa-brands fa-facebook"></i></a>
-                        <a><i className="fa-brands fa-twitter"></i></a>
-                        <a><i className="fa-brands fa-linkedin"></i></a>
+                        <a href = "https://www.instagram.com/skillmate.official/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                        <a href = "https://www.facebook.com/skillmateofficial" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+                        {/* <a><i className="fa-brands fa-twitter"></i></a> */}
+                        <a href = "https://www.linkedin.com/company/skillmate-official/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
 
