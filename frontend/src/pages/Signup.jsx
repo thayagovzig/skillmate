@@ -50,70 +50,74 @@ const Signup = () => {
     }
     
     return (
-        <>
+        <div className = "w-screen h-screen">  
         <LimitedNavbar />
-    <div className = "w-screen h-screen flex justify-center items-center paper-texture-bg px-5">    
-        <form className="rounded-xl flex flex-col max-w-3xl px-16 py-10 gap-y-4 w-auto mx-10 lg:w-3/4 neomorphic absolute bg-white/40 backdrop-blur-sm" method="POST" action={backend_url+"/waitlist"}>    
-            <Link to = "/" className = "absolute top-0 left-0 transform -translate-y-[130%] font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
+        <div className = "w-full h-full justify-center items-center paper-texture-bg px-5 pt-8">     
+            <div className = "mx-auto max-w-3xl px-4 py-4 ">   
+                <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
+            </div>
+            <div className = "w-full flex justify-center">  
+            <form className="rounded-xl flex flex-col mx-auto max-w-3xl px-16 py-10 gap-y-4 w-auto lg:w-3/4 neomorphic absolute bg-white/40 backdrop-blur-sm" method="POST" action={backend_url+"/waitlist"}>    
+                {/* <Link to = "/" className = "absolute top-0 left-0 transform -translate-y-[130%] font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link>  */}
+                <h2 className = "text-3xl text-center text-inter font-semibold font-inter mb-6">Join Our Waitlist</h2>
 
-            <h2 className = "text-3xl text-center text-inter font-semibold font-inter mb-6">Join Our Waitlist</h2>
+                <div className = "flex flex-col md:flex-row justify-between gap-x-3">    
+                    <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
+                        <label htmlFor="firstname" className = "font-semibold">First Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                        <input type="text" name = "firstname" 
+                            value={firstName} onChange = {(e) => {setFirstName(e.target.value)}}
+                            className = "border-2 border-slate-700 px-3 py-1 rounded-md" required        
+                        /> 
+                    </div>
 
-            <div className = "flex flex-col md:flex-row justify-between gap-x-3">    
-                <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
-                    <label htmlFor="firstname" className = "font-semibold">First Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
-                    <input type="text" name = "firstname" 
-                        value={firstName} onChange = {(e) => {setFirstName(e.target.value)}}
-                        className = "border-2 border-slate-700 px-3 py-1 rounded-md" required        
-                    /> 
+                    <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
+                        <label htmlFor="lastname" className = "font-semibold">Last Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                        <input type="text" name = "lastname" 
+                            value={lastName} onChange = {(e) => {setLastName(e.target.value)}}
+                            className = "border-2 border-slate-700 px-3 py-1 rounded-md" required      
+                        /> 
+                    </div>
+
                 </div>
 
-                <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
-                    <label htmlFor="lastname" className = "font-semibold">Last Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
-                    <input type="text" name = "lastname" 
-                        value={lastName} onChange = {(e) => {setLastName(e.target.value)}}
-                        className = "border-2 border-slate-700 px-3 py-1 rounded-md" required      
-                    /> 
+                <div className = "flex flex-col gap-y-2"> 
+                    <label htmlFor="email" className = "font-semibold">Email<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                    <input type="email" name = "email"
+                        className = "border-2 border-slate-700 px-3 py-1 rounded-md"
+                        value = {email} onChange = {(e) => {setEmail(e.target.value)}} required 
+                    />
                 </div>
 
-            </div>
+                <div className = "flex flex-col gap-y-2 my-4">
+                    <label htmlFor="phonenumber" className = "font-semibold">Phone Number<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>  
+                    <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none border-none focus:outline-none" />
+                </div>
 
-            <div className = "flex flex-col gap-y-2"> 
-                <label htmlFor="email" className = "font-semibold">Email<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
-                <input type="email" name = "email"
-                    className = "border-2 border-slate-700 px-3 py-1 rounded-md"
-                    value = {email} onChange = {(e) => {setEmail(e.target.value)}} required 
-                />
-            </div>
+                <div className = "flex flex-col gap-y-2"> 
+                    <label htmlFor="password" className = "font-semibold">Password<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                    <input type="password" name = "password" 
+                        className = "border-2 border-slate-700 px-3 py-1 rounded-md"
+                        value = {password} onChange = {(e) => {setPassword(e.target.value)}} required 
+                    />
+                </div>
 
-            <div className = "flex flex-col gap-y-2 my-4">
-                <label htmlFor="phonenumber" className = "font-semibold">Phone Number<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>  
-                <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none border-none focus:outline-none" />
-            </div>
+                <div className = "flex gap-x-3 px-2 my-2">  
+                    <input type="checkbox" value = {agree} onChange = {(e) => { if(e.target.checked){setAgree(true)}else{setAgree(false)}}} className = "" /> 
+                    <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the terms of Service and Privacy Policy<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                </div>
 
-            <div className = "flex flex-col gap-y-2"> 
-                <label htmlFor="password" className = "font-semibold">Password<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
-                <input type="password" name = "password" 
-                    className = "border-2 border-slate-700 px-3 py-1 rounded-md"
-                    value = {password} onChange = {(e) => {setPassword(e.target.value)}} required 
-                />
-            </div>
+                <div className = "flex justify-center">
+                    <button type = "submit" className = {agree?enabled_submit:disabled_submit} disabled={agree?false:true} >Join Waitlist</button>
+                </div>
 
-            <div className = "flex gap-x-3 px-2 my-2">  
-                <input type="checkbox" value = {agree} onChange = {(e) => { if(e.target.checked){setAgree(true)}else{setAgree(false)}}} className = "" /> 
-                <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the terms of Service and Privacy Policy<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                <div className = "flex justify-center text-center">
+                    {/* <p className="text-sm font-inter font-semibold mt-2">Already have an account? <Link to = "/login" className = "underline text-primary-green cursor-pointer">Login</Link></p>  */}
+                </div>
+            </form> 
             </div>
+        </div>
 
-            <div className = "flex justify-center">
-                <button type = "submit" className = {agree?enabled_submit:disabled_submit} disabled={agree?false:true} >Join Waitlist</button>
-            </div>
-
-            <div className = "flex justify-center text-center">
-                {/* <p className="text-sm font-inter font-semibold mt-2">Already have an account? <Link to = "/login" className = "underline text-primary-green cursor-pointer">Login</Link></p>  */}
-            </div>
-        </form> 
-    </div>
-
-    </>
+    </div> 
 ) }
 
 export default Signup;  
