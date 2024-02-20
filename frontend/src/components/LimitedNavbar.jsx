@@ -12,14 +12,14 @@ const LimitedNavbar = () =>{
         <div className = "container mx-auto flex justify-between items-center py-4 px-2">   
             <div className="left flex justify-center items-center gap-x-14 mr-10"> 
                 <div className="logo">
-                    <img src={Logo} alt="logo" className = "w-32 object-cover" />
+                    <Link to="/"><img src={Logo} alt="logo" className = "w-32 object-cover" /></Link>
                 </div>
 
                 <ul className = "hidden md:flex justify-center items-center gap-x-6 font-semibold text-sm py-2 flex-nowrap "> 
                     {/* <li>Get a Job</li> */}
                     {/* <li>Discover Skills</li> */}
-                    <li><a href = {"#whyskillmate"} className = "px-3 py-1 font-bold">Why Skillmate</a></li>
-                    <li><a href = {"#about"} className = "px-3 py-1 font-bold">About</a></li> 
+                    <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold">Why Skillmate</Link></li>
+                    <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li> 
                 </ul>
 
             </div>

@@ -6,14 +6,15 @@ import Testimony from '../components/Testimony';
 import Footer from '../components/Footer';
 import PreLoginLandingContent from "../components/PreLoginLandingContent";
 import PreFooterBanner from "../components/PreFooterBanner";
+import WhySkillmate from "../components/WhySkillmate";
 
 const Home = () => (
-    <>
-        <Navbar /> 
+    <> 
         <Hero />
         <HeroBanner />
         {/* <LandingContent /> */}
-        <PreLoginLandingContent /> {/* Landing Content Before Signin / Login */}
+        {/* <PreLoginLandingContent /> Landing Content Before Signin / Login */}
+        <WhySkillmate /> 
         <PreFooterBanner />
         <Footer />
     </>

@@ -1,6 +1,11 @@
 import HeroImage from "../assets/pasted_graphic_world.png"; 
+import Navbar from "./Navbar";
+const Hero = () => {
+    
 
-const Hero = () => (
+    return (
+    <>
+    <Navbar />
     <div className = "bg-slate-100 w-full relative overflow-x-hidden">  {/* flex flex-row  */}  
 
         <div className="pt-10 flex flex-col lg:flex-row justify-between"> {/* container max-w-lg mx-auto grid grid-cols-1 lg:grid-cols-1 grid-flow-row auto-rows-max*/}
@@ -74,6 +79,7 @@ const Hero = () => (
         </div> */}
 
     </div>
-) 
+    </>
+) }
 
 export default Hero

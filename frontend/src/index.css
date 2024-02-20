@@ -58,14 +58,15 @@
     position:absolute; 
     border-radius:50%; 
     /* z-index:-1;     */
-    background:#0dba4b; 
-    border:2px solid white;
+    background:rgb(207,241,219);   
+    /* border:2px solid white; */
   }
 
   .blur-blob-1{
     top:0;  
     right:0;
-    transform:translate(30%, 30%);  
+    transform:translate(50%, 50%); 
+    transform:scale(2);   
   }
 
   .blur-blob-2{
@@ -123,8 +124,26 @@ html{
 }
 
 .paper-texture-bg{
-  background:/* linear-gradient(rgba(66, 228, 66, 0.3), rgba(66, 228, 66, 0.4)),*/ url("./assets/paper-texture-background.jpg")  ; 
+  background:/* linear-gradient(rgba(66, 228, 66, 0.3), rgba(66, 228, 66, 0.4)),*/ url("./assets/white-paper-texture.jpg")  ; 
   background-size: cover;  
+}
+
+.login-simple-white-paper{
+  background:url("./assets/white-simple-textured-design-background.jpg"); 
+}
+
+.left-vector-line{
+  background-image: url("./assets/vector_left.png") ;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position:50% 70%; 
+}
+
+.right-vector-line{
+  background-image: url("./assets/vector_right.png") ;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position:50% 70%; 
 }
 
 .abc{

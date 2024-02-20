@@ -20,7 +20,7 @@ const PreFooterBanner = () => (
                 </p>
 
                 <div className = "flex justify-center mt-8">  
-                    <Link to = "/signup"><button className="rounded-full bg-primary-green text-white px-8 py-2 border-2 border-dark-green font-semibold text-nowrap">Start Here</button></Link>
+                    <Link to = "/signup"><button className="rounded-full bg-primary-green text-white px-8 py-2 border-dark-green font-semibold text-nowrap">Start Here</button></Link>
                 </div>
             </div>
         </div>
