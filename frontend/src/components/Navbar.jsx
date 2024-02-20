@@ -17,8 +17,9 @@ const Navbar = () =>{
                 <ul className = "hidden md:flex justify-center items-center gap-x-6 font-semibold text-sm py-2 flex-nowrap "> 
                     {/* <li>Get a Job</li> */}
                     {/* <li>Discover Skills</li> */}
-                    <li><a href = {"#whyskillmate"} className = "px-3 py-1 font-bold">Why Skillmate</a></li>
-                    <li><a href = {"/about"} className = "px-3 py-1 font-bold">About</a></li> 
+                    <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold">Why&nbsp;Skillmate</Link></li>
+                    <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
+                    <li><Link to = {"/blog"} className = "px-3 py-1 font-bold">Blog</Link></li> 
                 </ul>
 
             </div>

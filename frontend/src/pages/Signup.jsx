@@ -51,14 +51,14 @@ const Signup = () => {
     }
     
     return (
-        <div className = "w-screen h-screen">  
+        <div className = "w-screen h-screen">    
         <LimitedNavbar />
-        <div className = "w-full h-full justify-center items-center paper-texture-bg px-5 pt-8">     
+        <div className = "flex flex-col justify-center items-center paper-texture-bg pt-8 pb-16">     
             <div className = "mx-auto max-w-3xl px-4 py-4 ">   
                 <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
             </div>
-            <div className = "w-full flex justify-center">  
-            <form className="rounded-xl flex flex-col mx-auto max-w-3xl px-16 py-10 gap-y-4 w-auto lg:w-3/4 neomorphic absolute bg-white/40 backdrop-blur-sm" method="POST" action={backend_url+"/waitlist"}>    
+            <div className = "flex justify-center w-full">    
+            <form className="rounded-xl flex flex-col mx-auto max-w-3xl px-16 py-10 gap-y-4 w-auto lg:w-3/4 neomorphic bg-white/40 backdrop-blur-sm" method="POST" action={backend_url+"/waitlist"}>    
                 {/* <Link to = "/" className = "absolute top-0 left-0 transform -translate-y-[130%] font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link>  */}
                 <h2 className = "text-3xl text-center text-inter font-semibold font-inter mb-6">Join Our Waitlist</h2>
 
@@ -89,7 +89,7 @@ const Signup = () => {
                     />
                 </div>
 
-                <div className = "flex flex-col gap-y-2 my-4">
+                <div className = "flex flex-col gap-y-2 my-2">
                     <label htmlFor="phonenumber" className = "font-semibold">Phone Number<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>  
                     <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none border-none focus:outline-none" />
                 </div>
@@ -117,7 +117,9 @@ const Signup = () => {
             </form> 
             </div>
         </div>
-        <Footer />
+        <div className = "">
+            <Footer />
+        </div>
     </div> 
 ) }
 

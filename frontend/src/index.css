@@ -124,8 +124,9 @@ html{
 }
 
 .paper-texture-bg{
-  background:/* linear-gradient(rgba(66, 228, 66, 0.3), rgba(66, 228, 66, 0.4)),*/ url("./assets/white-paper-texture.jpg")  ; 
+  background:/* linear-gradient(rgba(66, 228, 66, 0.3), rgba(66, 228, 66, 0.4)),*/ url("./assets/white-paper-texture.jpg") ; 
   background-size: cover;  
+  height:max-content; 
 }
 
 .login-simple-white-paper{

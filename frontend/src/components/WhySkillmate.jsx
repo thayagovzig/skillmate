@@ -13,7 +13,7 @@ export default function WhySkillmate() {
   } 
 
   return (
-    <div className = "w-full py-8">  
+    <div className = "w-full py-8" id = {"whyskillmate"}>   
         <div className="container mx-auto"> 
             <h2 className = "text-center text-4xl font-bold font-inter mt-3">Why Skill<span className = "text-primary-green">mate?</span></h2>
             <h3 className = "text-xl font-semibold font-inter text-center mt-4 text-slate-800">Empowering Freelancers, Redefining Success</h3>

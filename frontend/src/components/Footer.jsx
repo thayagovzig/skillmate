@@ -1,4 +1,5 @@
 import Logo from "../assets/skillmate_logo/Pasted Graphic footer logo white.png"; 
+import { Link } from "react-router-dom";
 
 const Footer = () => (
     <div className="bg-dark-green footer">  
@@ -8,19 +9,19 @@ const Footer = () => (
                     <img src={Logo} alt="" className = "w-40" /> 
                 </div>
 
-                <ul className = "navlinks flex md:flex-col gap-y-3 my-12 gap-x-3">    
-                    <a href="">
+                <ul className = "navlinks flex gap-y-3 my-12 gap-x-3">    
+                    <Link to="/">
                         <li>Home</li>
-                    </a>
-                    <a href="">
+                    </Link> 
+                    <Link href="/about"> 
                         <li>About</li>
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="/"> 
                         <li>Services</li>
-                    </a>
-                    <a href="/signup"> 
+                    </Link> 
+                    <Link to="/signup"> 
                         <li>Contact</li>
-                    </a>
+                    </Link> 
                 </ul>
 
                 <div>
