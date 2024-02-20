@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'; 
+import Footer from '../components/Footer'; 
+
 export default function About() {
   return (
     <div className = "w-screen"> 
     <Navbar />
-    <div className = "w-full mt-2 pt-10 border-t-2 ">    
+    <div className = "w-full mt-2 pt-10 border-t-2 mb-20">     
         <div className="container mx-auto flex flex-col items-center">
             <h2 className = "font-semibold text-2xl text-center font-inter">Welcome To India's Trusted Portal for Freelancing Jobs.</h2>
             <h2 className = "font-bold text-center text-4xl my-6">Skill<span className = "text-primary-green">Mate</span></h2>
@@ -25,6 +27,7 @@ export default function About() {
             <h3 className = "text-center font-semibold text-2xl text-slate-800 mt-16 font-inter">Your Search For Quality Freelancing Ends Here!</h3>
         </div>
     </div>
+    <Footer />
     </div>
   )
 }
