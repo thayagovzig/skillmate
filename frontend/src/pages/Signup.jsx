@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PhoneInput from 'react-phone-number-input'; 
 import "react-phone-number-input/style.css"; 
 import LimitedNavbar from "../components/LimitedNavbar";
+import Footer from "../components/Footer";
 
 const Signup = () => {
     const [firstName, setFirstName] = useState(""); 
@@ -116,7 +117,7 @@ const Signup = () => {
             </form> 
             </div>
         </div>
-
+        <Footer />
     </div> 
 ) }
 
