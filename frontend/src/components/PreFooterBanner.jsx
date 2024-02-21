@@ -15,8 +15,8 @@ const PreFooterBanner = () => (
             <div className = "z-10 relative ">     
                 <h2 className="text-center text-primary-green text-2xl sm:text-3xl font-sora font-bold">Ready for your next hire?</h2>
                 <p className = "text-center  font-inter pt-5 font-semibold text-sm sm:text-base">    
-                    "Ready to level up your freelance game? Your next standout hire awaits at Skill Mate.<br />
-                    Let s make your project a success together!"
+                    We're incredibly excited for the upcoming launch!<br />
+                    Excited to be part of Skillmate? 
                 </p>
 
                 <div className = "flex justify-center mt-8">  
