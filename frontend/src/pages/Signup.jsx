@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PhoneInput from 'react-phone-number-input'; 
 import "react-phone-number-input/style.css"; 
 import LimitedNavbar from "../components/LimitedNavbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Signup = () => {
@@ -52,7 +53,7 @@ const Signup = () => {
     
     return (
         <div className = "w-screen h-screen">    
-        <LimitedNavbar />
+        <Navbar />
         <div className = "flex flex-col justify-center items-center paper-texture-bg pt-8 pb-16">     
             <div className = "mx-auto max-w-3xl px-4 py-4 ">   
                 <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
@@ -91,7 +92,7 @@ const Signup = () => {
 
                 <div className = "flex flex-col gap-y-2 my-2">
                     <label htmlFor="phonenumber" className = "font-semibold">Phone Number<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>  
-                    <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none border-none focus:outline-none" />
+                    <PhoneInput placeholder = "Phone Number" name = "phonenumber" value = {phoneNumber} defaultCountry = "IN" onChange = {setPhoneNumber} className="px-4 py-1 border-2 border-black rounded-md outline-none  focus:outline-none" />
                 </div>
 
                 <div className = "flex flex-col gap-y-2"> 

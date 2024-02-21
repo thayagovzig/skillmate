@@ -36,7 +36,7 @@ const Footer = () => (
 
             </div>
 
-            <div className = "py-6 border-t border-white mt-4 flex justify-between items-center px-4">    
+            <div className = "py-6 border-t border-white mt-4 flex flex-col md:flex-row  gap-y-6 justify-between items-center px-4">    
                 <p className = "text-white text-xs font-inter">&copy; 2024 Skillmate, All rights reserved</p>
                 <p className = "text-white text-xs font-inter">Privacy Policy | Terms of Service | Cookie Policy</p>
             </div>

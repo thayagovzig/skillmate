@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 const HeroBanner = () => (
     <div className = "flex w-full bg-secondary-green py-8 overflow-x-hidden">   
         <div className="container mx-auto flex justify-between items-center flex-grow-0 flex-col lg:flex-row">   
-            <div className="max-w-fit flex flex-col items-center lg:items-start"> 
-                <h2 className = "font-bold text-black font-sora text-2xl mb-4">Elevate Your Craft</h2>
-                <p className = "text-lg font-semibold">Discover the Power of Skills, Jobs and Projects</p> 
-                <p className= "font-semibold mt-1 mb-4 text-lg">Your Gateway to Limitless Possibilities</p> 
+            <div className="max-w-fit flex flex-col items-center lg:items-start px-5"> 
+                <h2 className = "font-bold font-sora text-xl sm:text-2xl mb-4 text-grey">Elevate Your Craft</h2>
+                <p className = "sm:text-lg font-semibold text-center md:text-left text-grey">Discover the Power of Skills, Jobs and Projects</p> 
+                <p className= "font-semibold mt-1 mb-4 sm:text-lg text-center md:text-left text-grey">Your Gateway to Limitless Possibilities</p> 
                 <Link to="/signup" className="rounded-full bg-primary-green text-white px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150">Start Here</Link> 
             </div>
 

@@ -120,7 +120,7 @@ html{
 }
 
 .PhoneInputInput{
-  @apply px-4 py-1 rounded-md outline-none border-2 border-black mx-1;     
+  @apply px-4 py-1 rounded-md outline-none border-none border-black mx-1;     
 }
 
 .paper-texture-bg{
@@ -135,7 +135,7 @@ html{
 
 .left-vector-line{
   background-image: url("./assets/vector_left.png") ;
-  background-size: contain;
+  background-size: contain; 
   background-repeat: no-repeat; 
   background-position:50% 70%; 
 }
@@ -143,9 +143,12 @@ html{
 .right-vector-line{
   background-image: url("./assets/vector_right.png") ;
   background-size: contain;
+  /* height:100%;  */
+  /* width:100%;  */
   background-repeat: no-repeat; 
   background-position:50% 70%; 
 }
+
 
 .abc{
   background:#27e36c; 

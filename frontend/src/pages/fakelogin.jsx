@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import GIF from "../assets/under construction.gif"; 
 import LimitedNavbar from "../components/LimitedNavbar";
+import Navbar from "../components/Navbar";
 
 const FakeLogin = () => {
     return (
         <div className = "w-screen overflow-x-hidden"> 
-        <LimitedNavbar />
+        <Navbar />
         <div className="flex items-center justify-center border-t-2 login-simple-white-paper"> 
             <div className="container mx-auto mt-10"> 
                 <h1 className = "text-3xl font-inter font-semibold text-center">Cooking <span className = "text-primary-green">Somethin</span> <span className = "text-5xl">Huge!</span></h1>

@@ -13,7 +13,7 @@ const dbParams = {
     host:process.env.HOST,
     user:process.env.USER,  
     password:process.env.PASSWORD,  
-    database:"auth" 
+    database:"skillmate_dev" 
 }
 
 // console.log(dbParams);  
@@ -22,7 +22,7 @@ const db = mysql.createConnection(dbParams);
 
 db.connect(err => {
     if(err){
-        console.log("Connectionn to DB Unsuccessful")
+        console.log("Connection to DB Unsuccessful")
         console.log(err.sqlMessage) ;  
     }else{
         console.log("Database Connected Successfully!") 

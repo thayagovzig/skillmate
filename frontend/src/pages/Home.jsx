@@ -8,7 +8,13 @@ import PreLoginLandingContent from "../components/PreLoginLandingContent";
 import PreFooterBanner from "../components/PreFooterBanner";
 import WhySkillmate from "../components/WhySkillmate";
 
-const Home = () => (
+import gsap from "gsap"; 
+import {useGSAP} from "@gsap/react"; 
+
+const Home = () =>{ 
+
+
+    return (
     <> 
         <Hero />
         <HeroBanner />
@@ -18,6 +24,6 @@ const Home = () => (
         <PreFooterBanner />
         <Footer />
     </>
-)
+)}
 
 export default Home; 

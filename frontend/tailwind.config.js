@@ -17,7 +17,9 @@ export default {
         }, 
         dark:{ 
           green:"#054A1E" 
-        }
+        }, 
+
+        grey:"#101010" 
       }
     },
   },
