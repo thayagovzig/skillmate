@@ -39,11 +39,11 @@ const Signup = () => {
             .then(res => res.json())
             .then(data => {
                 if(data.ok == true){
-                    // navigateTo("/success")
-                    alert(" Registration Successful! ") 
+                    navigateTo("/success")
+                    // alert(" Registration Successful! ") 
                 }else{
-                    // navigateTo("/failed") 
-                    alert(" Failed to Register :( ")  
+                    navigateTo("/failed") 
+                    // alert(" Failed to Register :( ")  
                 }
             })
             .catch(err => {console.log(err)}); 
