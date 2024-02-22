@@ -5,6 +5,7 @@ import "react-phone-number-input/style.css";
 import LimitedNavbar from "../components/LimitedNavbar";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import {useNavigate} from "react-router-dom"; 
 
 const Signup = () => {
     const [firstName, setFirstName] = useState(""); 
@@ -14,6 +15,8 @@ const Signup = () => {
     const [country, setCountry] = useState(""); 
     const [agree, setAgree] = useState(false);  
     const [phoneNumber, setPhoneNumber] = useState(); 
+
+    let navigateTo = useNavigate(); 
     
     const backend_url = "http://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
     // const backend_url = "http://localhost:5000" 
@@ -24,15 +27,25 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         let valid = validateForm(); 
-        if(valid == true){ 
-            let data = {firstname:firstName, lastname:lastName, email:email,phonenumber:phoneNumber, password:password}  
+        if(valid == false){  
+            let data = {firstname:firstName, lastname:lastName, email:email,phonenumber:phoneNumber, password:password};   
             console.log(data); 
-            fetch(backend_url+"/waitlist", {
+            fetch((backend_url+"/waitlist"), {
                 method:"POST", 
                 headers:{'Content-Type':"application/json"}, 
                 body:JSON.stringify(data), 
-                mode:"no-cors" 
-            });    
+                // mode:"no-cors" 
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.ok == true){
+                    navigateTo("/success")
+                }else{
+                    navigateTo("/failed") 
+                }
+            })
+            .catch(err => {console.log(err)}); 
+
         }else{
             alert(valid);  
         }
@@ -47,9 +60,11 @@ const Signup = () => {
             return "Email can't be empty" 
         }if(password.length < 8){
             return "Invalid Password Length"
+        }if(phoneNumber.length == 0){
+            return "Enter PhoneNumber"
         }
 
-        return true
+        return false; 
     }
     
     return (
@@ -60,7 +75,7 @@ const Signup = () => {
                 <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
             </div>
             <div className = "flex justify-center w-full">    
-            <form className="rounded-xl flex flex-col mx-auto max-w-3xl px-16 py-10 gap-y-4 w-auto lg:w-3/4 neomorphic bg-white/40 backdrop-blur-sm" method="POST" action={backend_url+"/waitlist"}>    
+            <form className="rounded-xl flex flex-col mx-auto max-w-3xl px-16 py-10 gap-y-4 w-auto lg:w-3/4 neomorphic bg-white/40 backdrop-blur-sm"  onSubmit = {(e) => handleSubmit(e)}>     {/* action={backend_url+"/waitlist"} method="POST" */}
                 {/* <Link to = "/" className = "absolute top-0 left-0 transform -translate-y-[130%] font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link>  */}
                 <h2 className = "text-3xl text-center text-inter font-semibold font-inter mb-6">Join Our Waitlist</h2>
 

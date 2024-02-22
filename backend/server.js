@@ -3,9 +3,11 @@ const app = express();
 const mysql = require('mysql'); 
 require("dotenv").config(); 
 const bcrypt = require('bcrypt');  
+const cors = require('cors'); 
 
 app.use(express.json()) 
 app.use(express.urlencoded({extended:true}));  
+app.use(cors()); 
 
 const client_url = "https://stage.skillmate.ai";  
 
@@ -66,20 +68,24 @@ app.post("/waitlist", async (req,res) => {
 
         db.query(query, (err) => {
             if(err){
-                res.send({"message":"Insert Failed", "status":false});
+                // res.send({"message":"Insert Failed", "status":false});
                 console.log(err.sqlMessage);   
                 console.log("Data Upload Failed!"); 
-                res.redirect(client_url+"/failed")   
+                // res.redirect(client_url+"/failed") 
+                res.send({"ok":false, "message":"Failed"})    
+            }else{
+                // res.send({"message":"Data Upload Successful", "status":true}) 
+                // res.redirect(client_url+"/success"); 
+                res.send({"ok":true, "message":"Success"})  
             }
-            // res.send({"message":"Data Upload Successful", "status":true}) 
-            res.redirect(client_url+"/success"); 
 
         }); 
 
     }catch(e){
         console.log(e.message); 
         console.log("Hash Failed");  
-        res.redirect(client_url+"/failed");  
+        // res.redirect(client_url+"/failed");  
+        res.send({"ok":false, "message":"Failed"})    
     }  
 
 })  
