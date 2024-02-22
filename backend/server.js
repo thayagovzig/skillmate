@@ -69,17 +69,17 @@ app.post("/waitlist", async (req,res) => {
                 res.send({"message":"Insert Failed", "status":false});
                 console.log(err.sqlMessage);   
                 console.log("Data Upload Failed!"); 
-                res.redirect(client_url+"/waitlist-failed")   
+                res.redirect(client_url+"/failed")   
             }
             // res.send({"message":"Data Upload Successful", "status":true}) 
-            res.redirect(client_url+"/waitlist-success"); 
+            res.redirect(client_url+"/success"); 
 
         }); 
 
     }catch(e){
         console.log(e.message); 
         console.log("Hash Failed");  
-        res.redirect(client_url+"/waitlist-failed");  
+        res.redirect(client_url+"/failed");  
     }  
 
 })  
