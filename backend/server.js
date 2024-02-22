@@ -9,18 +9,22 @@ app.use(express.urlencoded({extended:true}));
 
 const client_url = "http://localhost:5173"; 
 
+const railway_url = `mysql://root:fbDBhb3-5a-bE5bcfHBg-a4fB4-H5fca@monorail.proxy.rlwy.net:44771/railway`
+
 const dbParams = {
     host:process.env.RAILWAY_HOST,
     user:process.env.RAILWAY_USER,  
     password:process.env.RAILWAY_PASSWORD,  
     database:process.env.RAILWAY_DATABASE, 
-    port:"22176", 
+    port:process.env.RAILWAY_PORT, 
     // protocol:"TCP railway"
 }
 
 // console.log(dbParams);  
 
-const db = mysql.createConnection(dbParams);  
+// const db = mysql.createConnection(dbParams); 
+const db = mysql.createConnection(process.env.MYSQL_URL);   
+
 
 db.connect(err => {
     if(err){
