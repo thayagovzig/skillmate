@@ -154,3 +154,21 @@ html{
   background:#27e36c; 
 }
 
+.blog-markdown h1{ 
+  font-size:2rem; 
+  /* font-weight:800;   */ 
+
+}
+
+.blog-markdown h2{
+  font-size:1.7rem;  
+  /* font-weight:500;  */
+  color:#101010;  
+}
+
+.blog-markdown h3{
+  font-size:1.5rem; 
+  /* font-weight:500;  */
+}
+
+

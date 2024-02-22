@@ -1,0 +1,48 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Some Heading",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda mollitia deserunt distinctio cum unde debitis possimus hic qui eos.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!", 
+      "author": "Random Guy",
+      "time": "5 Mar, 2025"
+    },
+
+    
+
+    {
+      "id": "2",
+      "title": "Random HEading",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda mollitia deserunt distinctio cum unde debitis possimus hic qui eos.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "More Random",
+      "time": "5 Mar, 2025"
+      
+    },
+    {
+      "id": "3",
+      "title": "Header Heading",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda mollitia deserunt distinctio cum unde debitis possimus hic qui eos.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "Xtremists",
+      "time": "5 Mar, 2025"
+    },
+    {
+      "id": "4",
+      "title": "Some SUM",
+      "content": "<h1 class = 'bg-red-500'>Lorem ipsum dolor</h1>, sit amet <h3>consectetur adipisicing elit</h3>. Accusamus quia iure <b><h2>vero rerum sit error</h2></b> eius, at, sapiente, culpa maiores? Velit provident, possimus nesciunt necessitatibus modi vitae perspiciatis ducimus harum qui, saepe sequi ea dolores, minima deleniti rerum excepturi rem earum? Necessitatibus qui quasi suscipit odio reiciendis itaque fuga cupiditate iusto, blanditiis dolore animi ratione modi assumenda maiores molestias facere sed saepe. Earum harum cumque consequatur voluptatem eum explicabo aspernatur libero! Animi delectus eveniet ex ut aperiam voluptate vel saepe. Dicta, at. Libero totam, quas aspernatur dignissimos nobis adipisci dolore sint inventore consequatur voluptates neque cumque hic nam labore.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "Inexplainable",
+      "time": "5 Mar, 2025"
+    },
+    {
+      "id": "660b",
+      "title": "Random HEading",
+      "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus labore quia iure vero rerum sit error eius, at, sapiente, culpa maiores? Velit provident, possimus nesciunt necessitatibus modi vitae perspiciatis ducimus harum qui, saepe sequi ea dolores, minima deleniti rerum excepturi rem earum? Necessitatibus qui quasi suscipit odio reiciendis itaque fuga cupiditate iusto, blanditiis dolore animi ratione modi assumenda maiores molestias facere sed saepe. Earum harum cumque consequatur voluptatem eum explicabo aspernatur libero! Animi delectus eveniet ex ut aperiam voluptate vel saepe. Dicta, at. Libero totam, quas aspernatur dignissimos nobis adipisci dolore sint inventore consequatur voluptates neque cumque hic nam labore.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "More Random",
+      "time": "5 Mar, 2025"
+    }
+  ]
+}

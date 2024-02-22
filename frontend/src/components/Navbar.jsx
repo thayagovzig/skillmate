@@ -31,7 +31,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold">Why&nbsp;Skillmate</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
-                    <li><Link to = {"/blog"} className = "px-3 py-1 font-bold">Blog</Link></li> 
+                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li> 
                 </ul>
 
             </div>
@@ -56,7 +56,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold font-inter">Why&nbsp;Skillmate</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold font-inter">About</Link></li>
-                    <li><Link to = {"/blog"} className = "px-3 py-1 font-bold ">Blog</Link></li> 
+                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li> 
                     <li><Link to = {"/login"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Login</Link></li> 
                 </ul>
 

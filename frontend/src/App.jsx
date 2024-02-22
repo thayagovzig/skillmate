@@ -8,6 +8,7 @@ import FakeLogin from './pages/fakelogin';
 import WaitlistSuccess from './pages/WaitlistSuccess';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import BlogPage from './pages/BlogPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,8 @@ function App() {
       <Route path = "/login" element = {<FakeLogin />} /> 
       <Route path = "/waitlist-success" element = {<WaitlistSuccess />} />
       <Route path = "/about" element = {<About />} />
-      <Route path = "/blog" element = {<Blog />} />
+      <Route path = "/blogs" element = {<Blog />} />
+      <Route path = "/blog/:id" element = {<BlogPage />} />
     </Routes>
   </>    
 
