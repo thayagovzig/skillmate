@@ -39,17 +39,17 @@ app.get("/", (req,res) => {
     res.json({"message":"Hello World"}) 
 }); 
 
-app.get("/waitlist", (req,res) => {
-    let query = "select * from waitlist";  
-    db.query(query, (err,data) => {
-        if(err){
-            console.log(err.sqlMessage); 
-            res.send({"status":false, "message":"Retreival Failed"})   
-        }
-        console.log(data); 
-        res.send(data) 
-    })
-})  
+// app.get("/waitlist", (req,res) => {
+//     let query = "select * from waitlist";  
+//     db.query(query, (err,data) => {
+//         if(err){
+//             console.log(err.sqlMessage); 
+//             res.send({"status":false, "message":"Retreival Failed"})   
+//         }
+//         console.log(data); 
+//         res.send(data) 
+//     })
+// })  
 
 
 app.post("/waitlist", async (req,res) => {
