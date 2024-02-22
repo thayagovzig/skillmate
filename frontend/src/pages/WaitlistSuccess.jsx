@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'; 
 import LimitedNavbar from '../components/LimitedNavbar';
 import Footer from '../components/Footer';
+import success_animation from "../assets/success_animation.gif"; 
 
 
 const WaitlistSuccess = () => {
@@ -14,7 +15,8 @@ const WaitlistSuccess = () => {
             <h3 className = "text-2xl text-center font-semibold font-inter my-6 tracking-widest">in Waitlist</h3>
 
             <div className = "mx-auto flex justify-center max-w-md my-10"> 
-                <iframe src="https://lottie.host/embed/71ad1c0c-810e-4a19-a4d1-faa24683e3ed/LGfcu8xyXc.json" frameBorder="0" className = "aspect-video w-full"></iframe>
+                {/* <iframe src="https://lottie.host/embed/71ad1c0c-810e-4a19-a4d1-faa24683e3ed/LGfcu8xyXc.json" frameBorder="0" className = "aspect-video w-full"></iframe> */}
+                <img src={success_animation} alt="" className = " w-full" /> 
             </div>
 
             <div className = "">
