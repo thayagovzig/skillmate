@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 app.use(express.json()) 
 app.use(express.urlencoded({extended:true}));  
 
-const client_url = "http://localhost:5173"; 
+const client_url = "https://stage.skillmate.ai";  
 
 const railway_url = `mysql://root:fbDBhb3-5a-bE5bcfHBg-a4fB4-H5fca@monorail.proxy.rlwy.net:44771/railway`
 

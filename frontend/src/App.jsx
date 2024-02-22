@@ -9,6 +9,7 @@ import WaitlistSuccess from './pages/WaitlistSuccess';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPage from './pages/BlogPage';
+import WaitlistFailed from './pages/WaitlistFailed';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
       {/* <Route path = "/login" element = {<Login />} />  */} 
       <Route path = "/login" element = {<FakeLogin />} /> 
       <Route path = "/waitlist-success" element = {<WaitlistSuccess />} />
+      <Route path = "/waitlist-failed" element = {<WaitlistFailed />} />
       <Route path = "/about" element = {<About />} />
       <Route path = "/blogs" element = {<Blog />} />
       <Route path = "/blog/:id" element = {<BlogPage />} />

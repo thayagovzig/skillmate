@@ -171,4 +171,35 @@ html{
   /* font-weight:500;  */
 }
 
+.blog-markdown ul{
+  margin-block:1rem;
+}
+
+.blog-markdown li{
+  list-style-type: disc;
+  list-style:disc; 
+  padding-inline:1rem; 
+  margin-block:1rem;
+  line-height:1.5;  
+}
+
+.blog-markdown h2{
+  margin-top:2rem; 
+  margin-bottom:1rem; 
+}
+
+.blog-markdown h4{
+  margin-block:1rem; 
+  font-size:1.1rem; 
+  font-weight:500;  
+}
+
+.blog-markdown center{ 
+  text-align:center; 
+}
+
+.blog-markdown p{
+  margin-block:1rem; 
+}
+
 

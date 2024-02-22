@@ -3,13 +3,17 @@ import Footer from "../components/Footer";
 import Photo from "../assets/skillmate_logo/human.png";
 import { useEffect, useState } from "react"; 
 import { Link } from "react-router-dom";
+import {blogs} from "../blog_db/db.json"; 
+import default_pfp from "../assets/default_pfp.jpg"; 
 const Blog = () => {
 
-    const blog_url = "http://localhost:8000/blogs/" 
+    // const blog_url = "http://localhost:8000/blogs/"  
 
-    let [blogs, setBlogs] = useState([]); 
+    // let [blogs, setBlogs] = useState([]); 
 
-    const dummp_blogs = [
+    blogs.forEach(blog => blog.photo = default_pfp)   
+
+    const dummy_blogs = [
         {
             title:"Some Heading", 
             content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus labore quia iure vero rerum sit error eius, at, sapiente, culpa maiores? Velit provident, possimus nesciunt necessitatibus modi vitae perspiciatis ducimus harum qui, saepe sequi ea dolores, minima deleniti rerum excepturi rem earum? Necessitatibus qui quasi suscipit odio reiciendis itaque fuga cupiditate iusto, blanditiis dolore animi ratione modi assumenda maiores molestias facere sed saepe. Earum harum cumque consequatur voluptatem eum explicabo aspernatur libero! Animi delectus eveniet ex ut aperiam voluptate vel saepe. Dicta, at. Libero totam, quas aspernatur dignissimos nobis adipisci dolore sint inventore consequatur voluptates neque cumque hic nam labore.",
@@ -40,12 +44,12 @@ const Blog = () => {
         }
     ];  
 
-    useEffect(() => {
-        fetch(blog_url)
-        .then(res => res.json())
-        .then(data => {data.forEach(ele => {ele.photo = ele.photo?ele.photo:Photo}); return data}) // if(!ele.photo){ele.photo = Photo}
-        .then(data => {setBlogs(data); console.log(data)})  
-    }, [])
+    // useEffect(() => {
+    //     fetch(blog_url)
+    //     .then(res => res.json())
+    //     .then(data => {data.forEach(ele => {ele.photo = ele.photo?ele.photo:Photo}); return data}) // if(!ele.photo){ele.photo = Photo}
+    //     .then(data => {setBlogs(data); console.log(data)})  
+    // }, [])
 
     return (
         <div className="w-screen min-h-screen"> 

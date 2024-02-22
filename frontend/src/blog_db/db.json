@@ -1,0 +1,59 @@
+{
+  "blogs": [
+    
+    {
+      "id": "2",
+      "title": "Random HEading",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda mollitia deserunt distinctio cum unde debitis possimus hic qui eos.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "More Random",
+      "time": "5 Mar, 2025"
+      
+    },
+
+    {
+      "id": "3",
+      "title": "Header Heading",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem assumenda mollitia deserunt distinctio cum unde debitis possimus hic qui eos.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "Xtremists",
+      "time": "5 Mar, 2025"
+    },
+    {
+      "id": "4",
+      "title": "Some SUM",
+      "content": "<h1 class = 'bg-red-500'>Lorem ipsum dolor</h1>, sit amet <h3>consectetur adipisicing elit</h3>. Accusamus quia iure <b><h2>vero rerum sit error</h2></b> eius, at, sapiente, culpa maiores? Velit provident, possimus nesciunt necessitatibus modi vitae perspiciatis ducimus harum qui, saepe sequi ea dolores, minima deleniti rerum excepturi rem earum? Necessitatibus qui quasi suscipit odio reiciendis itaque fuga cupiditate iusto, blanditiis dolore animi ratione modi assumenda maiores molestias facere sed saepe. Earum harum cumque consequatur voluptatem eum explicabo aspernatur libero! Animi delectus eveniet ex ut aperiam voluptate vel saepe. Dicta, at. Libero totam, quas aspernatur dignissimos nobis adipisci dolore sint inventore consequatur voluptates neque cumque hic nam labore.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "Inexplainable",
+      "time": "5 Mar, 2025"
+    },
+    {
+      "id": "5", 
+      "title": "Random HEading",
+      "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus labore quia iure vero rerum sit error eius, at, sapiente, culpa maiores? Velit provident, possimus nesciunt necessitatibus modi vitae perspiciatis ducimus harum qui, saepe sequi ea dolores, minima deleniti rerum excepturi rem earum? Necessitatibus qui quasi suscipit odio reiciendis itaque fuga cupiditate iusto, blanditiis dolore animi ratione modi assumenda maiores molestias facere sed saepe. Earum harum cumque consequatur voluptatem eum explicabo aspernatur libero! Animi delectus eveniet ex ut aperiam voluptate vel saepe. Dicta, at. Libero totam, quas aspernatur dignissimos nobis adipisci dolore sint inventore consequatur voluptates neque cumque hic nam labore.",
+      "previewContent":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero voluptate repellendus in dolorum omnis at aut molestias eaque accusantium!",
+      "author": "More Random",
+      "time": "5 Mar, 2025"
+    }, 
+
+    {
+      "id":"1", 
+      "title":"Welcome To Skillmate", 
+      "subtitle":"Welcome to India's Trusted Portal for Freelancing Jobs.", 
+      "author":"Sathish", 
+      "previewContent":"Join the Revolution in Professional Growth with SkillMate\nSkillMate is not just a platform; it's a revolution in the professional world, especially for those in the technical fields of coding, testing, software engineering, and cybersecurity. As we prepare for our grand launch, we're inviting all tech enthusiasts, from seasoned experts to eager learners, to be part of a community that's set to redefine what it means to connect, grow, and succeed in the digital age.\n\nWhy SkillMate?\nAt its heart, SkillMate values the genuine skills that individuals bring to the table. We believe in fair recognition and compensation for the talents our members share. Our platform is meticulously designed to ensure that everyone, from coders to cybersecurity experts, finds their rightful place in the professional ecosystem, where quality meets opportunity.", 
+
+      "content":"<b><h1>Join the Revolution in Professional Growth with SkillMate</h1></b>\nSkillMate is not just a platform; it's a revolution in the professional world, especially for those in the technical fields of coding, testing, software engineering, and cybersecurity. As we prepare for our grand launch, we're inviting all tech enthusiasts, from seasoned experts to eager learners, to be part of a community that's set to redefine what it means to connect, grow, and succeed in the digital age.\n<h2>Why SkillMate?</h2>\n<p>At its heart, SkillMate values the genuine skills that individuals bring to the table. We believe in fair recognition and compensation for the talents our members share. Our platform is meticulously designed to ensure that everyone, from coders to cybersecurity experts, finds their rightful place in the professional ecosystem, where quality meets opportunity.</p>\n<p>SkillMate, a community beyond a job board which stands out in the bustling freelancing scene of India by offering more than just job listings. We're building a community where skills are exchanged, ideas flourish, and professional dreams are nurtured into reality. It's a space where trust, quality, and timely delivery are the foundations of every interaction.</p>\n<p>We understand that professional satisfaction isn't just about financial gains its equally empowering their recognization. It's about earning respect, empowerment, and pride through the skills you excel in. SkillMate introduces features like rewards, profile showcasing, and a focused platform to ensure that every member feels valued and recognized.</p>\n<h2>With SkillMate, you'll find:</h2>\n<ul>\n<li>Opportunities to match your skills with jobs and projects.</li>\n<li>A way to restore work-life balance and accelerate your career growth.</li>\n<li>A platform where your skills are accurately represented and valued.</li>\n<li>Future-Forward Features</li>\n<li>We're not stopping there. SkillMate is set to introduce a slew of innovative features designed to enhance your professional journey like a skill ranking system, dedicated areas for diverse professions, webhook integrations, ChatGPT-powered assistance, secure payment guarantees, a system for verified points, and rapid solutions to common challenges. These enhancements, among others, are all designed to deliver unparalleled value and a superior user experience.</li></ul>\n<h2>Be Part of Something Bigger</h2>\nSkillMate invites you to join a movement that champions fair pay, quality work, and meaningful connections. It's more than just another freelancing app; it's a gateway to where your skills can truly shine and take you places you've only dreamed of.\n<h2>Ready to Elevate Your Career?</h2>If you're a technical professional looking to expand your horizons or someone with a keen interest in entering the tech world, SkillMate is where you need to be. And for those in creative fields, stay tuned; your space is being crafted with the same passion and dedication.<h4>Join SkillMate today and be at the forefront of the professional revolution.</h4><center><h4>\"Discover your potential, showcase your talent, and let SkillMate be the launchpad for your professional dreams.\"</h4></center> ", 
+      "time":"1 Jan, 2024" 
+    }, 
+
+    {
+      "id":"2", 
+      "title":"About Organization", 
+      "subtitle":"Welcome to India's Trusted Portal for Freelancing Jobs.", 
+      "previewContent":"SkillMate\r\nOverview\r\nSkillMateisaneasy-to-useplatformthatbringstogetherpeoplewithdifferentskillsandthosewhoneedthem.It'sperfectforanyone,fromexpertsintheirfieldtothoseeagertolearnsomethingnew.SkillMatemakesiteasyforyoutosharewhatyou'regoodat,findpeoplewhocanteachyou,andworktogetherinwaysthatbenefiteveryone.It'sallaboutreachingyourhighestpotentialandachievingyourdreams,madesimplewithSkillMate.\r\n\r\nIt'saplacewhereyourskillsarevaluedandyougetpaidwhatyoudeserve.SkillMateisleadingthewayinIndiabyhelpingskilledpeoplefindgreatjobopportunitiesandmakingsurethey'repaidfairlyfortheirwork.We'rechanginghowskilledworkersfindjobsandgetpaidwellforthem.Joinusandseehowdifferentitishere!", 
+      "content":"SkillMate\r\nOverview\r\nSkillMateisaneasy-to-useplatformthatbringstogetherpeoplewithdifferentskillsandthosewhoneedthem.It'sperfectforanyone,fromexpertsintheirfieldtothoseeagertolearnsomethingnew.SkillMatemakesiteasyforyoutosharewhatyou'regoodat,findpeoplewhocanteachyou,andworktogetherinwaysthatbenefiteveryone.It'sallaboutreachingyourhighestpotentialandachievingyourdreams,madesimplewithSkillMate.\r\n\r\nIt'saplacewhereyourskillsarevaluedandyougetpaidwhatyoudeserve.SkillMateisleadingthewayinIndiabyhelpingskilledpeoplefindgreatjobopportunitiesandmakingsurethey'repaidfairlyfortheirwork.We'rechanginghowskilledworkersfindjobsandgetpaidwellforthem.Joinusandseehowdifferentitishere!", 
+      "time":"2 Feb, 2024"
+    }
+  ]
+}

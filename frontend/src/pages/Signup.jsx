@@ -15,8 +15,8 @@ const Signup = () => {
     const [agree, setAgree] = useState(false);  
     const [phoneNumber, setPhoneNumber] = useState(); 
     
-    // const backend_url = "http://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
-    const backend_url = "http://localhost:5000" 
+    const backend_url = "http://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
+    // const backend_url = "http://localhost:5000" 
 
     let enabled_submit = "rounded-md bg-primary-green text-white px-4 py-2 font-inter shadow-md shadow-slate-400 cursor-pointer" 
     let disabled_submit = "rounded-md bg-gray-500 text-white px-4 py-2 font-inter shadow-md shadow-slate-400 disabled cursor-not-allowed" 
