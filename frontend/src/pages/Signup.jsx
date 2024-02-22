@@ -18,7 +18,7 @@ const Signup = () => {
 
     let navigateTo = useNavigate(); 
     
-    const backend_url = "http://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
+    const backend_url = "https://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
     // const backend_url = "http://localhost:5000" 
 
     let enabled_submit = "rounded-md bg-primary-green text-white px-4 py-2 font-inter shadow-md shadow-slate-400 cursor-pointer" 
@@ -39,9 +39,11 @@ const Signup = () => {
             .then(res => res.json())
             .then(data => {
                 if(data.ok == true){
-                    navigateTo("/success")
+                    // navigateTo("/success")
+                    alert(" Registration Successful! ") 
                 }else{
-                    navigateTo("/failed") 
+                    // navigateTo("/failed") 
+                    alert(" Failed to Register :( ")  
                 }
             })
             .catch(err => {console.log(err)}); 
