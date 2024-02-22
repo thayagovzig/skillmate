@@ -10,10 +10,12 @@ app.use(express.urlencoded({extended:true}));
 const client_url = "http://localhost:5173"; 
 
 const dbParams = {
-    host:process.env.ALTER_HOST,
-    user:process.env.ALTER_USER,  
-    password:process.env.ALTER_PASSWORD,  
-    database:process.env.ALTER_DATABASE 
+    host:process.env.RAILWAY_HOST,
+    user:process.env.RAILWAY_USER,  
+    password:process.env.RAILWAY_PASSWORD,  
+    database:process.env.RAILWAY_DATABASE, 
+    port:"22176", 
+    // protocol:"TCP railway"
 }
 
 // console.log(dbParams);  
