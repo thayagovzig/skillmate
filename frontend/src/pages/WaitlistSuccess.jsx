@@ -4,7 +4,7 @@ import LimitedNavbar from '../components/LimitedNavbar';
 import Footer from '../components/Footer';
 
 
-export default function WaitlistSuccess() {
+const WaitlistSuccess = () => {
   return (
     <div className = "w-screen"> 
     <LimitedNavbar />
@@ -26,3 +26,5 @@ export default function WaitlistSuccess() {
     </div>
   )
 }
+
+export default WaitlistSuccess; 
