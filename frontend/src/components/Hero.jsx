@@ -10,11 +10,11 @@ const Hero = () => {
 
         <div className="pt-10 flex flex-col lg:flex-row justify-between"> {/* container max-w-lg mx-auto grid grid-cols-1 lg:grid-cols-1 grid-flow-row auto-rows-max*/}
             <div className="flex flex-col items-center lg:items-start py-20 p-5 md:pl-20 flex-grow-0">  {/* col-span-1 lg:col-span-1 */}
-                <h2 className="text-2xl sm:text-4xl font-sora font-bold text-center md:text-left text-grey">Empower Your Freelance Journey:</h2>
-                <h2 className="font-bold text-primary-green text-2xl sm:text-4xl font-sora mt-5 text-center md:text-left">Unlock Your Potential Today!</h2>
+                <h2 className="text-2xl sm:text-4xl font-sora font-bold text-center lg:text-left text-grey">Welcome to India's Trusted Portal for Freelancing Jobs</h2>
+                <h2 className="font-bold text-primary-green text-3xl sm:text-5xl font-sora mt-5 text-center md:text-left"><span className = "text-black">Skill</span>Mate</h2>
 
-                <p className = "mt-6 font-semibold text-lg text-center md:text-left text-grey">Discover endless opportunities to thrive in the world of freelancing.</p>
-                <p className = "mt-1 font-semibold text-lg text-center md:text-left text-grey">Let your talent shine and your dreams soar.</p>
+                <p className = "mt-6 font-semibold sm:text-lg md:text-xl text-center md:text-left text-grey">Where genuine skills meet great job opportunities.</p>
+                {/* <p className = "mt-1 font-semibold text-lg text-center md:text-left text-grey">Let your talent shine and your dreams soar.</p> */}
 
                 {/* Stats TABLE HERE */}
 

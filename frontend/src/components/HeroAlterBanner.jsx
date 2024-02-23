@@ -18,7 +18,7 @@ const HeroAlterBanner = () => (
                 <p className= "font-semibold mt-1 mb-4 sm:text-lg text-center md:text-left text-grey">Your Gateway to Limitless Possibilities</p> 
                 <Link to="/signup" className="rounded-full bg-primary-green text-white px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150">Start Here</Link> 
                 */}
-                <div className = "text-center mx-auto"><p className = "text-xl font-semibold px-6 py-2 rounded-full bg-primary-green text-white shadow-md">For&nbsp;Freelancers</p></div>
+                <div className = "text-center mx-auto"><p className = "text-xl font-semibold px-6 py-2 rounded-full bg-primary-green shadow-md">For&nbsp;Freelancers</p></div>
                 <img src={for_freelancers} alt="" className = "w-[250px] h-auto object-cover" />
             </div>
 

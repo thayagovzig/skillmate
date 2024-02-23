@@ -32,7 +32,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
-                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li> 
+                    {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li>  */}
                 </ul>
 
             </div>
@@ -44,7 +44,7 @@ const Navbar = () =>{
             </div>
 
             <div className = "flex md:hidden items-center justify-center gap-x-12 px-4">       
-                <Link to = "/signup" className=" sm:block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Join Waitlist</Link>
+                <Link to = "/signup" className=" sm:block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Join&nbsp;Waitlist</Link>
 
                 <div className={"hamburger md:hidden flex flex-col w-8 h-6 cursor-pointer transition-all duration-200 relative " + ((isActive)?"justify-center":"justify-between")} onClick = {(e) => {setActive(prev => !prev)}}>        
                     <div className={"w-full h-1 transition-all duration-200 bg-black origin-center relative rounded-full " + ((isActive)?"rotate-45 translate-y-1/2":"rotate-0") } ></div> 
@@ -57,7 +57,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold font-inter">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold font-inter">About</Link></li>
-                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li> 
+                    {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li>  */}
                     <li><Link to = {"/login"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Login</Link></li> 
                 </ul>
 
