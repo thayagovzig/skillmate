@@ -24,8 +24,8 @@ function App() {
       <Route path = "/success" element = {<WaitlistSuccess />} />
       <Route path = "/failed" element = {<WaitlistFailed />} />
       <Route path = "/about" element = {<About />} />
-      <Route path = "/blogs" element = {<Blog />} />
-      <Route path = "/blog/:id" element = {<BlogPage />} />
+      {/* <Route path = "/blogs" element = {<Blog />} /> */}
+      {/* <Route path = "/blog/:id" element = {<BlogPage />} /> */}
     </Routes>
   </>    
 

@@ -30,9 +30,9 @@ const LimitedNavbar = () =>{
                 <ul className = "hidden md:flex justify-center items-center gap-x-6 font-semibold text-sm py-2 flex-nowrap "> 
                     {/* <li>Get a Job</li> */}
                     {/* <li>Discover Skills</li> */}
-                    <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold">Why&nbsp;Skillmate</Link></li>
+                    <li><Link to = {"/"} className = "px-3 py-1 font-bold">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
-                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li> 
+                    {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li>  */}
                 </ul>
 
             </div>
@@ -55,9 +55,9 @@ const LimitedNavbar = () =>{
                 <ul className = {"ham-links flex flex-col absolute top-full left-0 right-0 justify-center items-center gap-y-8 font-semibold text-sm bg-primary-green transition-all duration-500 overflow-hidden z-10 " + ((isActive)?"py-8":"py-0 max-h-0") } >    
                     {/* <li>Get a Job</li> */}
                     {/* <li>Discover Skills</li> */}
-                    <li><Link to = {"/#whyskillmate"} className = "px-3 py-1 font-bold font-inter">Why&nbsp;Skillmate</Link></li>
+                    <li><Link to = {"/"} className = "px-3 py-1 font-bold font-inter">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold font-inter">About</Link></li>
-                    <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li> 
+                    {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li>  */}
                     {/* <li><Link to = {"/login"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Login</Link></li>  */}
                 </ul>
 
