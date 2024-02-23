@@ -39,11 +39,13 @@ const Signup = () => {
             .then(res => res.json())
             .then(data => {
                 if(data.ok == true){
-                    navigateTo("/success")
+                    // console.log(data) 
                     // alert(" Registration Successful! ") 
+                    navigateTo("/success")
                 }else{
+                    // console.log(data); 
+                    // alert(" Failed to Register :( ")
                     navigateTo("/failed") 
-                    // alert(" Failed to Register :( ")  
                 }
             })
             .catch(err => {console.log(err)}); 
@@ -70,9 +72,9 @@ const Signup = () => {
     }
     
     return (
-        <div className = "w-screen h-screen">    
+        <div className = "w-screen h-screen" id = {"top"}>    
         <Navbar />
-        <div className = "flex flex-col justify-center items-center paper-texture-bg pt-8 pb-16">     
+        <div className = "flex flex-col justify-center items-center paper-texture-bg pt-8 pb-16">       
             <div className = "mx-auto max-w-3xl px-4 py-4 ">   
                 <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
             </div>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"; 
+import { HashLink } from "react-router-hash-link";
 
 const PreFooterBanner = () => (
     <div className = "bg-slate-100 py-16 mx-auto px-8 relative"> 
@@ -13,14 +14,13 @@ const PreFooterBanner = () => (
             {/* <div className="glass-blur absolute top-0 bottom-0 left-0 right-0"></div>  */}
 
             <div className = "z-10 relative ">     
-                <h2 className="text-center text-primary-green text-2xl sm:text-3xl font-sora font-bold">Ready for your next hire?</h2>
+                <h2 className="text-center text-primary-green text-2xl sm:text-3xl font-sora font-bold">We're incredibly excited for the upcoming launch!</h2>
                 <p className = "text-center  font-inter pt-5 font-semibold text-sm sm:text-base">    
-                    We're incredibly excited for the upcoming launch!<br />
                     Excited to be part of Skillmate? 
                 </p>
 
                 <div className = "flex justify-center mt-8">  
-                    <Link to = "/signup"><button className="rounded-full bg-primary-green text-white px-8 py-2 border-dark-green font-semibold text-nowrap text-sm sm:text-base">Start Here</button></Link>
+                    <HashLink to = {"/signup#top"}><button className="rounded-full bg-primary-green text-white px-8 py-2 border-dark-green font-semibold text-nowrap text-sm sm:text-base">Start Here</button></HashLink>
                 </div>
             </div>
         </div>

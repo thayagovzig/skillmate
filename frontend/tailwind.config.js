@@ -10,7 +10,8 @@ export default {
 
       colors:{
         primary:{
-          green:"#0dba4b"  
+          green:"#0dba4b", 
+          lightgreen:"#27e36c"  
         }, 
         secondary:{
           green:"#cff1db"

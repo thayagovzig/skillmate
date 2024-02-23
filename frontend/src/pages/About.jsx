@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'; 
 import Footer from '../components/Footer'; 
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <div className = "w-screen"> 
     <Navbar />
-    <div className = "w-full mt-2 pt-10 border-t-2 mb-20">     
+    <div className = "w-full mt-2 pt-10 border-t-2 mb-10">      
         <div className="container mx-auto flex flex-col items-center px-8"> 
             <h2 className = "font-semibold text-2xl text-center font-inter text-grey">Welcome To India's Trusted Portal for Freelancing Jobs.</h2>
             <h2 className = "font-bold text-center text-4xl my-6 text-grey">Skill<span className = "text-primary-green">Mate</span></h2>
@@ -25,6 +26,12 @@ export default function About() {
             </p>
 
             <h3 className = "text-center font-semibold text-2xl text-slate-800 mt-16 font-inter">Your Search For Quality Freelancing Ends Here!</h3>
+
+
+            <div className = "flex justify-center items-center my-10"> 
+                <Link to = "/signup" className="block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Join Waitlist</Link>
+            </div>
+
         </div>
     </div>
     <Footer />

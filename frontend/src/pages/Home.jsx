@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import PreLoginLandingContent from "../components/PreLoginLandingContent";
 import PreFooterBanner from "../components/PreFooterBanner";
 import WhySkillmate from "../components/WhySkillmate";
+import HeroAlterBanner from "../components/HeroAlterBanner";
 
 import gsap from "gsap"; 
 import {useGSAP} from "@gsap/react"; 
@@ -17,10 +18,11 @@ const Home = () =>{
     return (
     <> 
         <Hero />
-        <HeroBanner />
+        {/* <HeroBanner /> */}
+        <HeroAlterBanner />
         {/* <LandingContent /> */}
         {/* <PreLoginLandingContent /> Landing Content Before Signin / Login */}
-        <WhySkillmate /> 
+        {/* <WhySkillmate />  */}
         <PreFooterBanner />
         <Footer />
     </>

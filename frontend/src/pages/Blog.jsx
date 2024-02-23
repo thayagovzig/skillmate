@@ -4,14 +4,18 @@ import Photo from "../assets/skillmate_logo/human.png";
 import { useEffect, useState } from "react"; 
 import { Link } from "react-router-dom";
 import {blogs} from "../blog_db/db.json"; 
-import default_pfp from "../assets/default_pfp.jpg"; 
+import Sathish from "../assets/people/sathish.jpg"; 
 const Blog = () => {
 
     // const blog_url = "http://localhost:8000/blogs/"  
 
-    // let [blogs, setBlogs] = useState([]); 
+    // let [blogs, setBlogs] = useState([]);
+    
+    const IMG = (name) => {
+        return 
+    }
 
-    blogs.forEach(blog => blog.photo = default_pfp)   
+    blogs.forEach(blog => blog.photo = Sathish ) // blog.photo || "../assets/default_pfp.jpg"    
 
     const dummy_blogs = [
         {
@@ -52,12 +56,12 @@ const Blog = () => {
     // }, [])
 
     return (
-        <div className="w-screen min-h-screen"> 
+        <div className="w-screen flex flex-col justify-between min-h-screen gap-y-10">  
             <Navbar /> 
 
             {blogs&&
 
-                <div className="container mx-auto h-auto py-10 border-t">   
+                <div className="container mx-auto h-auto py-10">   
                     <h2 className="text-4xl text-center font-bold">Ask Like-<span className = "text-primary-green">Minded</span> People!</h2>
 
                     <div className="blogs flex justify-center items-center gap-6 mt-10 flex-wrap">  

@@ -5,13 +5,13 @@ require("dotenv").config();
 const bcrypt = require('bcrypt');  
 const cors = require('cors'); 
 
+app.use(cors({origin:true})); 
 app.use(express.json()) 
 app.use(express.urlencoded({extended:true}));  
-app.use(cors()); 
 
 const client_url = "https://stage.skillmate.ai";  
 
-const railway_url = `mysql://root:fbDBhb3-5a-bE5bcfHBg-a4fB4-H5fca@monorail.proxy.rlwy.net:44771/railway`
+const railway_url = `mysql://root:${process.env.MYSQLPASSWORD}@monorail.proxy.rlwy.net:44771/railway`
 
 const dbParams = {
     host:process.env.RAILWAY_HOST,
@@ -37,6 +37,14 @@ db.connect(err => {
     }
 }) 
 
+// Manual CORS BLocking 
+
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
+
 app.get("/", (req,res) => {
     res.json({"message":"Hello World"}) 
 }); 
@@ -57,8 +65,8 @@ app.get("/", (req,res) => {
 app.post("/waitlist", async (req,res) => {
     console.log("Body:") 
     console.log(req.body);  
-    console.log("JSON: ") 
-    console.log(req.json); 
+    // console.log("JSON: ") 
+    // console.log(req.json); 
     let {firstname, lastname, email, phonenumber, password} = req.body;
     try{
         let salt = await bcrypt.genSalt(); 
@@ -66,13 +74,13 @@ app.post("/waitlist", async (req,res) => {
         phonenumber = parseInt(phonenumber.replace(" ",""))
         let query = `insert into waitlist(firstname, lastname, email, phonenumber, password) values("${firstname}", "${lastname}", "${email}", ${phonenumber},"${hashed_pw}")`; 
 
-        db.query(query, (err) => {
+        db.query(query, async (err) => {
             if(err){
                 // res.send({"message":"Insert Failed", "status":false});
                 console.log(err.sqlMessage);   
                 console.log("Data Upload Failed!"); 
                 // res.redirect(client_url+"/failed") 
-                res.send({"ok":false, "message":"Failed"})    
+                res.send({"ok":false, "message":"Failed", ...err})     
             }else{
                 // res.send({"message":"Data Upload Successful", "status":true}) 
                 // res.redirect(client_url+"/success"); 
@@ -85,7 +93,7 @@ app.post("/waitlist", async (req,res) => {
         console.log(e.message); 
         console.log("Hash Failed");  
         // res.redirect(client_url+"/failed");  
-        res.send({"ok":false, "message":"Failed"})    
+        res.send({"ok":false, "message":"Failed", ...e})     
     }  
 
 })  

@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import default_pfp from "../assets/default_pfp.jpg"; 
+import Sathish from "../assets/people/sathish.jpg"; 
 import {blogs} from "../blog_db/db.json";   
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 
 const BlogPage = () => { 
@@ -13,7 +15,7 @@ const BlogPage = () => {
 
     useEffect( () => {
         let b = blogs.filter(blog => blog.id == id)[0]; 
-        b.photo = default_pfp;  
+        b.photo = Sathish;  
         setPost(b);  
     }, []); 
 
@@ -28,10 +30,10 @@ const BlogPage = () => {
     // }, []) 
 
     return (
-        <div className = "w-full px-5 min-h-screen">  
+        <div className = "w-full min-h-screen">  
             <Navbar /> 
             {post && 
-                <div className = "max-w-[700px] mx-auto mt-6"> 
+                <div className = "max-w-[700px] mx-auto my-6 mb-10">  
                     <h2 className = "text-3xl font-bold text-grey my-6 text-center">{post.title}</h2>
                     {post.subtitle && 
                         <div className = "text-center text-xl text-slate-700 ">  
@@ -54,8 +56,14 @@ const BlogPage = () => {
                         <div dangerouslySetInnerHTML={{ __html: post.content }} className = "blog-markdown [&>*]:font-inter" />  
                     </div>
 
+                    <div className = "flex justify-center items-center my-10"> 
+                        <Link to = "/signup" className="hidden md:block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Join Waitlist</Link>
+                    </div>
+
                 </div>
             }
+
+            <Footer /> 
         </div>
     )  
 }
