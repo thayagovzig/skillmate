@@ -77,7 +77,7 @@ const HeroAlterBanner = () => (
 
                 <div className = "flex rounded-lg bg-primary-green text-white px-3 py-8 max-w-xs shadow-sm shadow-slate-400 w-[220px] transition-all duration-200 hover:shadow-[2px_2px_5px_rgba(0,0,0,.6)] hover:shadow-md hover:scale-105 hover:bg-[#27e36c] flex-col items-center">  
                     {/* <img src = {Passion} className = "text-center block fa-solid fa-diagram-project text-6xl w-[67px] h-[67px]"></img> */} 
-                    <i class="fa-solid fa-ranking-star text-7xl"></i>
+                    <i className="fa-solid fa-ranking-star text-7xl"></i>
                     <h3 className = "font-semibold text-xl text-center my-3">Quality Assured</h3> 
                     <p className = "font-semibold text-center text-sm">Our review and rating system helps you choose the best of the talent for top notch results.</p>
                 </div>

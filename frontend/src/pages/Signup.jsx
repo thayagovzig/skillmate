@@ -45,6 +45,9 @@ const Signup = () => {
                 }else{
                     // console.log(data); 
                     // alert(" Failed to Register :( ")
+                    if(data.sqlMessage){
+                        alert(data.sqlMessage.slice(0, data.sqlMessage.indexOf("for")));  
+                    }
                     navigateTo("/failed") 
                 }
             })
