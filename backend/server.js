@@ -73,9 +73,9 @@ app.post("/waitlist", async (req,res) => {
         // let salt = await bcrypt.genSalt(); 
         // let hashed_pw = await bcrypt.hash(password,salt)
         phonenumber = parseInt(phonenumber.replace(" ",""))
-        let query = `insert into waitlist(fullname, email, phonenumber, feedback) values("${fullname}", "${email}", ${phonenumber}, "${feedback}");`;   
+        let query = `insert into waitlist(fullname, email, phonenumber, feedback) values(?,?,?,?);`; // "${fullname}", "${email}", ${phonenumber}, "${feedback}"   
 
-        db.query(query, async (err) => {
+        db.query(query,[fullname, email, phonenumber, feedback] ,async (err) => {
             if(err){
                 // res.send({"message":"Insert Failed", "status":false});
                 console.log("[ERROR FROM DB QUERY!]")
