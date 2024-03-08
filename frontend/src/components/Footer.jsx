@@ -27,7 +27,7 @@ const Footer = () => (
                 <div>
                     <h2 className = "font-inter text-center text-white tracking-wider">Follow us on</h2>
                     <div className="social">
-                        <a href = "https://www.instagram.com/skillmate.official/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                        <a href = "https://www.instagram.com/skillmateofficial" target="_blank"><i className="fa-brands fa-instagram"></i></a>
                         <a href = "https://www.facebook.com/skillmateofficial" target="_blank"><i className="fa-brands fa-facebook"></i></a>
                         <a><i className="fa-brands fa-twitter" href = "https://twitter.com/SkillMate257345" target="_blank" ></i></a>
                         <a href = "https://www.linkedin.com/company/skillmate-official/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>

@@ -68,16 +68,17 @@ app.post("/waitlist", async (req,res) => {
     console.log(req.body);  
     // console.log("JSON: ") 
     // console.log(req.json); 
-    let {firstname, lastname, email, phonenumber} = req.body; // , password 
+    let {fullname, email, phonenumber, feedback} = req.body; // , password 
     try{
         // let salt = await bcrypt.genSalt(); 
         // let hashed_pw = await bcrypt.hash(password,salt)
         phonenumber = parseInt(phonenumber.replace(" ",""))
-        let query = `insert into waitlist(firstname, lastname, email, phonenumber) values("${firstname}", "${lastname}", "${email}", ${phonenumber});`;   
+        let query = `insert into waitlist(fullname, email, phonenumber, feedback) values("${fullname}", "${email}", ${phonenumber}, "${feedback}");`;   
 
         db.query(query, async (err) => {
             if(err){
                 // res.send({"message":"Insert Failed", "status":false});
+                console.log("[ERROR FROM DB QUERY!]")
                 console.log(err.sqlMessage);   
                 console.log("Data Upload Failed!"); 
                 // res.redirect(client_url+"/failed") 

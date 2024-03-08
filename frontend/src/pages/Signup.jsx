@@ -8,18 +8,19 @@ import Footer from "../components/Footer";
 import {useNavigate} from "react-router-dom"; 
 
 const Signup = () => {
-    const [firstName, setFirstName] = useState(""); 
+    const [fullName, setFullName] = useState(""); 
     const [lastName, setLastName] = useState(""); 
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState(""); 
     const [country, setCountry] = useState(""); 
+    const [feedback, setFeedback] = useState(""); 
     const [agree, setAgree] = useState(false);  
     const [phoneNumber, setPhoneNumber] = useState(); 
 
     let navigateTo = useNavigate(); 
     
-    // const backend_url = "https://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
-    const backend_url = "http://localhost:5000" 
+    const backend_url = "https://skillmate-production.up.railway.app"; //{ {process.env.REACT_ALL_BACKEND_URL }} 
+    // const backend_url = "http://localhost:5000" 
 
     let enabled_submit = "rounded-md bg-primary-green text-white px-4 py-2 font-inter shadow-md shadow-slate-400 cursor-pointer" 
     let disabled_submit = "rounded-md bg-gray-500 text-white px-4 py-2 font-inter shadow-md shadow-slate-400 disabled cursor-not-allowed" 
@@ -28,7 +29,7 @@ const Signup = () => {
         e.preventDefault(); 
         let valid = validateForm(); 
         if(valid == false){  
-            let data = {firstname:firstName, lastname:lastName, email:email,phonenumber:phoneNumber}; // , password:password    
+            let data = {fullname:fullName, email:email,phonenumber:phoneNumber, feedback:feedback}; // , password:password    
             console.log(data); 
             fetch((backend_url+"/waitlist"), {
                 method:"POST", 
@@ -59,11 +60,13 @@ const Signup = () => {
     }
 
     const validateForm = () => {
-        if(firstName.length==0){
-            return "FirstName can't be empty" 
-        }if(lastName.length == 0){
-            return "LastName can't be empty"
-        }if(email.length==0){
+        if(fullName.length==0){
+            return "Name can't be empty" 
+        }
+        // if(lastName.length == 0){
+        //     return "LastName can't be empty"
+        // }
+        if(email.length==0){
             return "Email can't be empty" 
         }
 
@@ -91,21 +94,21 @@ const Signup = () => {
                 <h2 className = "text-3xl text-center text-inter font-semibold font-inter mb-6">Join Our Waitlist</h2>
 
                 <div className = "flex flex-col md:flex-row justify-between gap-x-3">    
-                    <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
-                        <label htmlFor="firstname" className = "font-semibold">First Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
-                        <input type="text" name = "firstname" 
-                            value={firstName} onChange = {(e) => {setFirstName(e.target.value)}}
+                    <div className = "flex flex-col gap-y-2 w-full "> {/*md:w-1/2*/}   
+                        <label htmlFor="fullname" className = "font-semibold">Full Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                        <input type="text" name = "fullname" 
+                            value={fullName} onChange = {(e) => {setFullName(e.target.value)}}
                             className = "border-2 border-slate-700 px-3 py-1 rounded-md" required        
                         /> 
                     </div>
 
-                    <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
+                    {/* <div className = "flex flex-col gap-y-2 w-full md:w-1/2">   
                         <label htmlFor="lastname" className = "font-semibold">Last Name<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
                         <input type="text" name = "lastname" 
                             value={lastName} onChange = {(e) => {setLastName(e.target.value)}}
                             className = "border-2 border-slate-700 px-3 py-1 rounded-md" required      
                         /> 
-                    </div>
+                    </div> */}
 
                 </div>
 
@@ -129,6 +132,11 @@ const Signup = () => {
                         value = {password} onChange = {(e) => {setPassword(e.target.value)}} required 
                     />
                 </div>*/}
+
+                <div className = "flex flex-col gap-y-2 my-2">
+                    <label htmlFor="feedback" className = "font-semibold">Few Words for Skillmate</label>
+                    <textarea name = "feedback" value = {feedback} onChange = {(e) => {setFeedback(e.target.value)}}  className = "w-full outline-none border-2 min-h-24 rounded-md border-black p-4" type="text" />
+                </div>
 
                 <div className = "flex gap-x-3 px-2 my-2">  
                     <input type="checkbox" value = {agree} onChange = {(e) => { if(e.target.checked){setAgree(true)}else{setAgree(false)}}} className = "" /> 

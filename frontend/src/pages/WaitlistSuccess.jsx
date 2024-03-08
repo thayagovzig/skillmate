@@ -20,6 +20,15 @@ const WaitlistSuccess = () => {
             </div>
 
             <div className = "">
+                <div>
+                  <p className = "text-lg sm:text-xl text-center font-semibold my-10">
+                    Congratulations!<br />  
+                    Great work. We'll update once the projects are Live
+                  </p>
+                </div> 
+            </div>
+
+            <div className = "">
                 <Link to = "/"><p className = "text-xl sm:text-2xl text-center font-semibold underline my-10">&lt; Go Back to <span className = "text-primary-green text-2xl sm:text-3xl">Home</span></p></Link>
             </div>
         </div>
