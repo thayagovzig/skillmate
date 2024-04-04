@@ -60,8 +60,8 @@ const Signup = () => {
     }
 
     const validateForm = () => {
-        if(fullName.length==0){
-            return "Name can't be empty" 
+        if(fullName.length<=3){ 
+            return "Name can't be empty/short"  
         }
         // if(lastName.length == 0){
         //     return "LastName can't be empty"
@@ -74,8 +74,8 @@ const Signup = () => {
         //     return "Invalid Password Length"
         //}
 
-        if(phoneNumber.length == 0){
-            return "Enter PhoneNumber"
+        if(phoneNumber.length !== 10){ 
+            return "Invalid PhoneNumber"  
         }
 
         return false; 
@@ -85,7 +85,7 @@ const Signup = () => {
         <div className = "w-screen h-screen" id = {"top"}>    
         <Navbar />
         <div className = "flex flex-col justify-center items-center paper-texture-bg pt-8 pb-16">       
-            <div className = "mx-auto max-w-3xl px-4 py-4 ">   
+            <div className = "mx-auto max-w-3xl px-4 py-4">    
                 <Link to = "/" className = "font-semibold text-primary-green underline-offset-2 underline font-inter">&lt; Go back to Home</Link> 
             </div>
             <div className = "flex justify-center w-full">    
@@ -140,7 +140,7 @@ const Signup = () => {
 
                 <div className = "flex gap-x-3 px-2 my-2">  
                     <input type="checkbox" value = {agree} onChange = {(e) => { if(e.target.checked){setAgree(true)}else{setAgree(false)}}} className = "" /> 
-                    <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the terms of Service and Privacy Policy<span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                    <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the terms of Service and <Link to = "/privacypolicy" className = "underline underline-offset-1 text-primary-green">Privacy Policy</Link><span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
                 </div>
 
                 <div className = "flex justify-center">
