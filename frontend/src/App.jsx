@@ -11,6 +11,8 @@ import Blog from './pages/Blog';
 import BlogPage from './pages/BlogPage';
 import WaitlistFailed from './pages/WaitlistFailed';
 import PrivPol from './pages/PrivPol';
+import TermsOfService from './pages/TermsOfService';
+import CookPol from './pages/CookPol';
 
 function App() {
   
@@ -26,6 +28,8 @@ function App() {
       <Route path = "/failed" element = {<WaitlistFailed />} />
       <Route path = "/about" element = {<About />} />
       <Route path = "/privacypolicy" element = {<PrivPol />} />
+      <Route path = "/terms" element = {<TermsOfService />} />
+      <Route path = "/cookie" element = {<CookPol />} />
       {/* <Route path = "/blogs" element = {<Blog />} /> */}
       {/* <Route path = "/blog/:id" element = {<BlogPage />} /> */}
     </Routes>

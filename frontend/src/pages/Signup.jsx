@@ -140,7 +140,7 @@ const Signup = () => {
 
                 <div className = "flex gap-x-3 px-2 my-2">  
                     <input type="checkbox" value = {agree} onChange = {(e) => { if(e.target.checked){setAgree(true)}else{setAgree(false)}}} className = "" /> 
-                    <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the terms of Service and <Link to = "/privacypolicy" className = "underline underline-offset-1 text-primary-green">Privacy Policy</Link><span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
+                    <label htmlFor="agree" className = "text-sm font-semibold font-inter">I agree to the <Link to = "/terms" className = "underline underline-offset-1 text-primary-green">Terms of Service</Link> and <Link to = "/privacypolicy" className = "underline underline-offset-1 text-primary-green">Privacy Policy</Link><span className = "text-red-500 text-lg">&nbsp;*&nbsp;</span></label>
                 </div>
 
                 <div className = "flex justify-center">

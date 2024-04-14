@@ -20,7 +20,7 @@ const Navbar = () =>{
     }   
 
     return(
-    <div className = "w-full relative z-20">       
+    <div className = "w-full relative z-20 bg-white">       
         <div className = "container mx-auto flex justify-between items-center py-4 px-2">   
             <div className="left flex justify-center items-center gap-x-14 mr-10"> 
                 <div className="logo"> 
