@@ -74,7 +74,7 @@ const Signup = () => {
         //     return "Invalid Password Length"
         //}
 
-        if(phoneNumber.length !== 10){ 
+        if(phoneNumber.length < 10 || phoneNumber.length > 15){  
             return "Invalid PhoneNumber"  
         }
 

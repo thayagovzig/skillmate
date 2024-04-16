@@ -4,3 +4,5 @@ frontend/.env
 backend/.env 
 Landing page.pdf
 Landing pages 
+dbDownload.py
+Ignore/*
