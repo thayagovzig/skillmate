@@ -72,6 +72,9 @@ app.post("/waitlist", async (req,res) => {
     try{
         // let salt = await bcrypt.genSalt(); 
         // let hashed_pw = await bcrypt.hash(password,salt)
+        // if(!(fullname && email && phonenumber && feedback)){ 
+        //     return 
+        // }
         phonenumber = parseInt(phonenumber.replace(" ",""))
         let query = `insert into waitlist(fullname, email, phonenumber, feedback) values(?,?,?,?);`; // "${fullname}", "${email}", ${phonenumber}, "${feedback}"   
 
