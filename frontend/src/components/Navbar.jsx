@@ -32,6 +32,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
+                    <li><Link to = {"/register"} className = "px-3 py-1 font-bold">Register</Link></li>
                     {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li>  */}
                 </ul>
 
@@ -41,6 +42,7 @@ const Navbar = () =>{
                 {/* <input type="text" className="hidden md:block rounded-full px-4 py-2 max-w-md outline-none border-2 border-slate-200 placeholder:text-slate-600 text-slate-900 placeholder:font-semibold placeholder:text-sm text-sm font-semibold" placeholder = "Search" /> */}
                 <Link to = "/login" className="hidden md:block rounded-full text-primary-green px-8 py-2 border-2 border-primary-green text-sm font-semibold text-nowrap">Log&nbsp;in</Link> 
                 <Link to = "/signup" className="hidden md:block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Join&nbsp;Waitlist</Link>
+                <a href = "https://konfhub.com/checkout/slrf?ticketId=16174" className="hidden md:block rounded-full bg-primary-green text-white px-4 sm:px-8 py-2 border-2 border-primary-green text-xs sm:text-sm font-semibold text-nowrap hover:bg-[#27e36c] transition-all duration-150" >Invitation</a>
             </div>
 
             <div className = "flex md:hidden items-center justify-center gap-x-12 px-4">       
@@ -57,8 +59,11 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold font-inter">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold font-inter">About</Link></li>
+                    <li><Link to = {"/register"} className = "px-3 py-1 font-bold font-inter">Register</Link></li>
                     {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li>  */}
                     <li><Link to = {"/login"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Login</Link></li> 
+                    <li><a href = {"https://konfhub.com/checkout/slrf?ticketId=16174"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Invitation</a></li> 
+
                 </ul>
 
             </div>
