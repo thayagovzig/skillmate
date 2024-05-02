@@ -32,7 +32,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold">About</Link></li>
-                    <li><Link to = {"/register"} className = "px-3 py-1 font-bold">Register</Link></li>
+                    {/* <li><Link to = {"/register"} className = "px-3 py-1 font-bold">Register</Link></li> */}
                     {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold">Blog</Link></li>  */}
                 </ul>
 
@@ -59,7 +59,7 @@ const Navbar = () =>{
                     {/* <li>Discover Skills</li> */}
                     <li><Link to = {"/"} className = "px-3 py-1 font-bold font-inter">Home</Link></li>
                     <li><Link to = {"/about"} className = "px-3 py-1 font-bold font-inter">About</Link></li>
-                    <li><Link to = {"/register"} className = "px-3 py-1 font-bold font-inter">Register</Link></li>
+                    {/* <li><Link to = {"/register"} className = "px-3 py-1 font-bold font-inter">Register</Link></li> */}
                     {/* <li><Link to = {"/blogs"} className = "px-3 py-1 font-bold ">Blog</Link></li>  */}
                     <li><Link to = {"/login"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Login</Link></li> 
                     {/* <li><a href = {"https://konfhub.com/checkout/slrf?ticketId=16174"} className = "px-6 py-2 font-sora font-bold bg-white rounded-full shadow-md">Invitation</a></li>  */}

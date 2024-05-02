@@ -24,12 +24,12 @@ const Home = () =>{
     <> 
         <Hero />
 
-        <Modal isVisible={regPopup} close = {() => {setRegPopup(false)}}>
+        {/* <Modal isVisible={regPopup} close = {() => {setRegPopup(false)}}>
             <a target = '_blank' className = "relative w-full" href = "https://konfhub.com/slrf"><div className="max-w-3xl mx-auto flex items-center justify-center w-full overflow-hidden">
                 <img src={registration_poster} alt="" className="hidden sm:block object-contain w-full h-auto" />
                 <img src={registration_poster_mobile} alt="" className="block sm:hidden object-contain w-full h-auto max-h-[calc(100%-200px)]" />
             </div></a>
-        </Modal>
+        </Modal> */}
         {/* <HeroBanner /> */}
         <HeroAlterBanner />
         {/* <LandingContent /> */}

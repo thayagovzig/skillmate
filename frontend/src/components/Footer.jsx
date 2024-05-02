@@ -29,7 +29,7 @@ const Footer = () => (
                     <div className="social">
                         <a href = "https://www.instagram.com/skillmateofficial" target="_blank"><i className="fa-brands fa-instagram"></i></a>
                         <a href = "https://www.facebook.com/skillmateofficial" target="_blank"><i className="fa-brands fa-facebook"></i></a>
-                        <a><i className="fa-brands fa-twitter" href = "https://twitter.com/SkillMate257345" target="_blank" ></i></a>
+                        <a href = "https://twitter.com/skillmate257345"><i className="fa-brands fa-twitter"  target="_blank" ></i></a>
                         <a href = "https://www.linkedin.com/company/skillmate-official/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                         <a href = "https://www.youtube.com/channel/UCOx9vSrE4_GEDC7cof5D5ow" target="_blank"><i className="fa-brands fa-youtube"></i></a>
 
