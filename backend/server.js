@@ -1,6 +1,6 @@
 const express = require('express'); 
 const app = express(); 
-const mysql = require('mysql'); 
+const mysql = require('mysql2'); 
 require("dotenv").config(); 
 // const bcrypt = require('bcrypt');  
 const cors = require('cors'); 
@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true}));
 
 const client_url = "https://stage.skillmate.ai";  
 
-const railway_url = `mysql://root:${process.env.MYSQLPASSWORD}@monorail.proxy.rlwy.net:44771/railway`
+//const railway_url = `mysql://root:${process.env.MYSQLPASSWORD}@monorail.proxy.rlwy.net:44771/railway`
 
 const dbParams = {
     host:process.env.RAILWAY_HOST,
