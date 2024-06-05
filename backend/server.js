@@ -31,7 +31,7 @@ const db = mysql.createConnection(process.env.MYSQL_URL);
 db.connect(err => {
     if(err){
         console.log("Connection to DB Unsuccessful")
-        console.log(err.sqlMessage) ;  
+        console.log(err?.sqlMessage) ;  
     }else{
         console.log("Database Connected Successfully!") 
     }
@@ -82,7 +82,10 @@ app.post("/waitlist", async (req,res) => {
             if(err){
                 // res.send({"message":"Insert Failed", "status":false});
                 console.log("[ERROR FROM DB QUERY!]")
-                console.log(err.sqlMessage);   
+                console.log(err?.sqlMessage); 
+                console.log(err.message); 
+                console.log(err)   
+                console.log("[ERROR MESSAGE ☝🏻]"); 
                 console.log("Data Upload Failed!"); 
                 // res.redirect(client_url+"/failed") 
                 res.send({"ok":false, "message":"Failed", ...err})     
