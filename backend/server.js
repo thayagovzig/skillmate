@@ -1,6 +1,7 @@
 const express = require('express'); 
 const app = express(); 
-const mysql = require('mysql2');   
+// const mysql = require('mysql2/promise');   
+const { createPool } = require('mysql2/promise');   
 require("dotenv").config(); 
 // const bcrypt = require('bcrypt');  
 const cors = require('cors'); 
@@ -14,28 +15,40 @@ const client_url = "https://stage.skillmate.ai";
 //const railway_url = `mysql://root:${process.env.MYSQLPASSWORD}@monorail.proxy.rlwy.net:44771/railway`
 
 const dbParams = {
-    host:process.env.RAILWAY_HOST,
-    user:process.env.RAILWAY_USER,  
-    password:process.env.RAILWAY_PASSWORD,  
-    database:process.env.RAILWAY_DATABASE, 
-    port:process.env.RAILWAY_PORT, 
+    host:process.env.MYSQLHOST,
+    user:process.env.MYSQLUSER,  
+    password:process.env.MYSQLPASSWORD,  
+    database:process.env.MYSQLDATABASE, 
+    port:process.env.MYSQLPORT, 
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
     // protocol:"TCP railway"
 }
 
 // console.log(dbParams);  
 
 // const db = mysql.createConnection(dbParams); 
-const db = mysql.createConnection(process.env.MYSQL_URL);   
 
+// const db = mysql.createConnection(process.env.MYSQL_URL);  
 
-db.connect(err => {
-    if(err){
-        console.log("Connection to DB Unsuccessful")
-        console.log(err?.sqlMessage) ;  
-    }else{
-        console.log("Database Connected Successfully!") 
-    }
-}) 
+// db.connect(err => {
+//     if(err){
+//         console.log("Connection to DB Unsuccessful")
+//         console.log(err?.sqlMessage) ;  
+//     }else{
+//         console.log("Database Connected Successfully!") 
+//     }
+// }) 
+
+const pool = createPool(dbParams) 
+
+function create_connection(){
+   
+}
+
+create_connection()
+
 
 // Manual CORS BLocking 
 
@@ -78,29 +91,34 @@ app.post("/waitlist", async (req,res) => {
         phonenumber = parseInt(phonenumber.replace(" ",""))
         let query = `insert into waitlist(fullname, email, phonenumber, feedback) values(?,?,?,?);`; // "${fullname}", "${email}", ${phonenumber}, "${feedback}"   
 
-        db.query(query,[fullname, email, phonenumber, feedback] ,async (err) => {
-            if(err){
-                // res.send({"message":"Insert Failed", "status":false});
-                console.log("[ERROR FROM DB QUERY!]")
-                console.log(err?.sqlMessage); 
-                console.log(err.message); 
-                console.log(err)   
-                console.log("[ERROR MESSAGE ☝🏻]"); 
-                console.log("Data Upload Failed!"); 
-                // res.redirect(client_url+"/failed") 
-                res.send({"ok":false, "message":"Failed", ...err})  
-                return    
-            }else{
-                // res.send({"message":"Data Upload Successful", "status":true}) 
-                // res.redirect(client_url+"/success"); 
-                res.send({"ok":true, "message":"Success"})  
-            }
+        // db.query(query,[fullname, email, phonenumber, feedback] ,async (err) => {
+        //     if(err){
+        //         // res.send({"message":"Insert Failed", "status":false});
+        //         console.log("[ERROR FROM DB QUERY!]")
+        //         console.log(err?.sqlMessage); 
+        //         console.log(err.message); 
+        //         console.log(err)   
+        //         console.log("[ERROR MESSAGE ☝🏻]"); 
+        //         console.log("Data Upload Failed!"); 
+        //         // res.redirect(client_url+"/failed") 
+        //         res.send({"ok":false, "message":"Failed", ...err})  
+        //         if(err.code == "PROTOCOL_CONNECTION_LOST"){
 
-        }); 
+        //         }   
+        //     }else{
+        //         // res.send({"message":"Data Upload Successful", "status":true}) 
+        //         // res.redirect(client_url+"/success"); 
+        //         res.send({"ok":true, "message":"Success"})  
+        //     }
+
+        // }); 
+
+        await pool.query(query, [fullname, email, phonenumber, feedback]);
+        res.send({ "ok": true, "message": "Success" });
 
     }catch(e){
         console.log(e.message); 
-        console.log("Hash Failed");  
+        console.log("Error Occured while inserting data!");  
         // res.redirect(client_url+"/failed");  
         res.send({"ok":false, "message":"Failed", ...e}) 
         return     
