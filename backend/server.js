@@ -43,11 +43,21 @@ const dbParams = {
 
 const pool = createPool(dbParams) 
 
-function create_connection(){
-   
+async function checkPoolConnection() {
+    try {
+        const connection = await pool.getConnection();
+        await connection.ping();
+        console.log("Database connected successfully!");
+        connection.release();
+    } catch (err) {
+        console.error("Error connecting to the database:");
+        console.error(err.message);
+    }
 }
 
-create_connection()
+// Check pool connection when the server starts
+checkPoolConnection();
+
 
 
 // Manual CORS BLocking 
@@ -121,7 +131,7 @@ app.post("/waitlist", async (req,res) => {
         console.log("Error Occured while inserting data!");  
         // res.redirect(client_url+"/failed");  
         res.send({"ok":false, "message":"Failed", ...e}) 
-        return     
+           
     }  
 
 })  
