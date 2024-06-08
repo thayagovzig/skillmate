@@ -88,7 +88,8 @@ app.post("/waitlist", async (req,res) => {
                 console.log("[ERROR MESSAGE ☝🏻]"); 
                 console.log("Data Upload Failed!"); 
                 // res.redirect(client_url+"/failed") 
-                res.send({"ok":false, "message":"Failed", ...err})     
+                res.send({"ok":false, "message":"Failed", ...err})  
+                return    
             }else{
                 // res.send({"message":"Data Upload Successful", "status":true}) 
                 // res.redirect(client_url+"/success"); 
@@ -101,7 +102,8 @@ app.post("/waitlist", async (req,res) => {
         console.log(e.message); 
         console.log("Hash Failed");  
         // res.redirect(client_url+"/failed");  
-        res.send({"ok":false, "message":"Failed", ...e})     
+        res.send({"ok":false, "message":"Failed", ...e}) 
+        return     
     }  
 
 })  
